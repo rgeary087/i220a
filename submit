@@ -1,0 +1,64 @@
+Script started on 2020-08-27 12:15:44-04:00 [TERM="xterm" TTY="/dev/pts/3" COLUMNS="117" LINES="65"]
+bash: /home/umrigar/cs240/bin/student.rc: No such file or directory
+rgeary1@remote06:~/tmp$ mkdir -p submit[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ..
+rgeary1@remote06:~$ cd projects
+rgeary1@remote06:~/projects$ cd ..
+rgeary1@remote06:~$ cat ~/ss[K[K.ssh/id-rsa.pub
+cat: /home/rgeary1/.ssh/id-rsa.pub: No such file or directory
+rgeary1@remote06:~$ cat ~/.ssh/id-rsa.pub[1Prsa.pub_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFvsX7hysw6S3DPiezm2p1XqyY0hWchp+ndFYRP1kePdaQOQMXgOef0ZrWaLqaIbo345SwivTK4extRwMrFohPP+z4zOSSVfYKnSR99KDaXl/qRGlbsq94sE4w6/AYa+R4kmg7Hx8J2tpDFgAi48r+WeEATLf37bc2NvSxdBvu1cgIR6VYQYBwJR6AgnocwIcfZeehEHfGMU3LpIJG4R9IB7OLQBAfPL6WlYS6zmT8fM0KfcIAUYSJ6VsQ4NgE9tMPfyizWiq2zaU6h84w6aKbZ9LxnV2NFipW/Y3+7lXtMfgIPnn8AKGz6I2EFuyyXCTmoR+TXhsoo8EKjlrVmBGV rgeary1@g7-35
+rgeary1@remote06:~$ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFvsX7hysw6S3DPiezm2p1XqyY0hWchp+ndFYRP1kePdaQOQMXgOef0ZrWaLqaIbo345SwivTK4extRwMrFohPP+z4zOSSVfYKnSR99KDaXl/qRGlbsq94sE4w6/AYa+R4kmg7Hx8J2tpDFgAi48r+WeEATLf37bc2NvSxdBvu1cgIR6VYQYBwJR6AgnocwIcfZeehEHfGMU3LpIJG4R9IB7OLQBAfPL6WlYS6zmT8fM0KfcIAUYSJ6VsQ4NgE9tMPfyizWiq2zaU6h84w6aKbZ9LxnV2NFipW/Y3+7lXtMfgIPnn8AKGz6I2EFuyyXCTmoR+TXhsoo8EKjlrVmBGV rgeary1@g7-35^C
+rgeary1@remote06:~$ cd ~/projects
+rgeary1@remote06:~/projects$ git cloin[K[Kne rgeary087/1220a.git
+fatal: repository 'rgeary087/1220a.git' does not exist
+rgeary1@remote06:~/projects$ git clone rgeary087/1220a.gitgrgeary087/1220a.gitirgeary087/1220a.gittrgeary087/1220a.git@rgeary087/1220a.gitgrgeary087/1220a.gitirgeary087/1220a.gittrgeary087/1220a.githrgeary087/1220a.giturgeary087/1220a.gitbrgeary087/1220a.git.rgeary087/1220a.gitcrgeary087/1220a.gitorgeary087/1220a.gitmrgeary087/1220a.git:rgeary087/1220a.git
+Cloning into '1220a'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+rgeary1@remote06:~/projects$ git cloin[K[Kne https://githuc[Kb.com/rgeay087/i220a.git
+Cloning into 'i220a'...
+Username for 'https://github.com': rgeary087
+Password for 'https://rgeary087@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/rgeay087/i220a.git/' not found
+rgeary1@remote06:~/projects$ git clone https://github.com/rgeay087/i220a.git[C[C
+Cloning into 'i220a'...
+Username for 'https://github.com': rgeary087
+Password for 'https://rgeary087@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/rgeay087/i220a.git/' not found
+rgeary1@remote06:~/projects$ git clone https://github.com/rgeay087/i220a.git[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit@github.com:rgeary087/i220a.git
+Cloning into 'i220a'...
+Warning: Permanently added the RSA host key for IP address '140.82.112.3' to the list of known hosts.
+remote: Enumerating objects: 4, done.[K
+remote: Counting objects:  25% (1/4)[Kremote: Counting objects:  50% (2/4)[Kremote: Counting objects:  75% (3/4)[Kremote: Counting objects: 100% (4/4)[Kremote: Counting objects: 100% (4/4), done.[K
+remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Receiving objects:  25% (1/4)   Receiving objects:  50% (2/4)   Receiving objects:  75% (3/4)   Receiving objects: 100% (4/4)   Receiving objects: 100% (4/4), done.
+rgeary1@remote06:~/projects$ ls
+cs220  cs240  i220a  i240a
+rgeary1@remote06:~/projects$ cd ~
+rgeary1@remote06:~$ ln -s ~/projects/i220a
+rgeary1@remote06:~$ cd ~/i220a
+rgeary1@remote06:~/i220a$ git status is[K[K-s
+rgeary1@remote06:~/i220a$ git commit -a -m 'Hemlo again'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+rgeary1@remote06:~/i220a$ git push
+Everything up-to-date
+rgeary1@remote06:~/i220a$ ls -dl ~/cs22[K[K[K[K[K[K[K[K[K[K[K[K[Kls -dl ~/cs220 ~/i220a
+lrwxrwxrwx 1 rgeary1 rgeary1 14 Aug 27 11:55 /home/rgeary1/cs220 -> projects/cs220
+lrwxrwxrwx 1 rgeary1 rgeary1 28 Aug 27 12:27 /home/rgeary1/i220a -> /home/rgeary1/projects/i220a
+rgeary1@remote06:~/i220a$ ls -dl ~/cs220 ~/i220a[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K ~/ssh ~/cs200[K[K20 ~/i220a
+ls: cannot access '/home/rgeary1/ssh': No such file or directory
+lrwxrwxrwx 1 rgeary1 rgeary1 14 Aug 27 11:55 /home/rgeary1/cs220 -> projects/cs220
+lrwxrwxrwx 1 rgeary1 rgeary1 28 Aug 27 12:27 /home/rgeary1/i220a -> /home/rgeary1/projects/i220a
+rgeary1@remote06:~/i220a$ cd ~/i220a
+rgeary1@remote06:~/i220a$ mv [K[K[Kexit
+
+Script done on 2020-08-27 12:29:31-04:00 [COMMAND_EXIT_CODE="0"]
