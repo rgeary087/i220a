@@ -1,0 +1,820 @@
+Script started on 2020-09-02 18:57:28-04:00 [TERM="xterm" TTY="/dev/pts/3" COLUMNS="93" LINES="51"]
+bash: /home/umrigar/cs240/bin/student.rc: No such file or directory
+rgeary1@remote04:~/i220a/submit/lab1$ cp -pr ~/cs220/ka[K[Klabs/L[Klab1/exercises/[K .
+rgeary1@remote04:~/i220a/submit/lab1$ ls
+exercises  lab1.LOG
+rgeary1@remote04:~/i220a/submit/lab1$ cd exercises
+rgeary1@remote04:~/i220a/submit/lab1/exercises$ ls
+1-hello  2-err	3-multifile  4-from-scratch  5-auto-dependencies  Makefile
+rgeary1@remote04:~/i220a/submit/lab1/exercises$ cd 1
+bash: cd: 1: No such file or directory
+rgeary1@remote04:~/i220a/submit/lab1/exercises$ cd 1-hello/
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ ls -l
+total 4
+-rw-r----- 1 rgeary1 rgeary1 75 Sep  2 17:09 hello.c
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ make
+make: *** No targets specified and no makefile found.  Stop.
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ make hello
+cc     hello.c   -o hello
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ ls -l
+total 24
+-rwxr-x--- 1 rgeary1 rgeary1 16608 Sep  2 18:58 hello
+-rw-r----- 1 rgeary1 rgeary1    75 Sep  2 17:09 hello.c
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ ./hello
+hello world
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ make -p| |[C grep './c'
+make: *** No targets specified and no makefile found.  Stop.
+rgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ make -p | grep './c'[K[K[K[K[K[K[K[K[K[Kless
+make: *** No targets specified and no makefile found.  Stop.
+[?1049h[22;0;0t[?1h=# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Sep  2 18:59:47 2020
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+_VIRTUALENVWRAPPER_API =  mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2vi rtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv set virtualenvproject mkproject cdproject mktmpenv
+# environment
+XDG_SESSION_TYPE = tty
+# default
+CWEAVE = cweave
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /import/linux/home1/rgeary1/projects/i220a/submit/lab1/exercises/1-hello
+# makefile
+SHELL = /bin/sh
+# default
+RM = rm -f
+# default
+CO = co
+# default
+COMPILE.mod = $(M2C) $(M2FLAGS) $(MODFLAGS) $(TARGET_ARCH)
+# environment
+_ = /usr/bin/make
+# default
+PREPROCESS.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -F
+# default
+LINK.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# default
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[KLINK.o = $(CC) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KOUTPUT_OPTION = -o $@
+:[K[K# default
+:[K[KCOMPILE.cpp = $(COMPILE.cc)
+:[K[K# makefile
+:[K[KMAKEFILE_LIST := 
+:[K[K# 'override' directive
+:[K[KGNUMAKEFLAGS := 
+:[K[K# default
+:[K[KLINK.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# environment
+:[K[KDBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/14700/bus
+:[K[K# default
+:[K[KCC = cc
+:[K[K# default
+:[K[KCHECKOUT,v = +$(if $(wildcard $@),,$(CO) $(COFLAGS) $< $@)
+:[K[K# default
+:[K[KCPP = $(CC) -E
+:[K[K# default
+:[K[KLINK.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# environment
+:[K[KKRB5CCNAME = FILE:/tmp/krb5cc_14700_0RYiBvi9st
+:[K[K# environment
+:[K[KSSH_CONNECTION = 149.125.112.99 51942 128.226.114.204 22
+:[K[K# environment
+:[K[KPATH = /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bi :[K[Kn:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+:[K[K# default
+:[K[KLD = ld
+:[K[K# default
+:[K[KTEXI2DVI = texi2dvi
+:[K[K# default
+:[K[KYACC = yacc
+:[K[K# environment
+:[K[KSSH_TTY = /dev/pts/3
+:[K[K# environment
+:[K[KXDG_RUNTIME_DIR = /run/user/14700
+:[K[K# default
+:[K[KARFLAGS = rv
+:[K[K# default
+:[K[KLINK.r = $(FC) $(FFLAGS) $(RFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KLINT = lint
+:[K[K# default
+:[K[KCOMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+:[K[K# default
+:[K[KLINT.c = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KYACC.m = $(YACC) $(YFLAGS)
+:[K[K# default
+:[K[KYACC.y = $(YACC) $(YFLAGS)
+:[K[K# default
+:[K[KAR = ar
+:[K[K# default
+:[K[K.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine onesh :[K[Kell archives jobserver output-sync check-symlink load
+:[K[K# default
+:[K[KTANGLE = tangle
+:[K[K# default
+:[K[KGET = get
+:[K[K# automatic
+:[K[K%F = $(notdir $%)
+:[K[K# default
+:[K[KCOMPILE.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+:[K[K# default
+:[K[KCTANGLE = ctangle
+:[K[K# default
+:[K[K.LIBPATTERNS = lib%.so lib%.a
+:[K[K# default
+:[K[KLINK.C = $(LINK.cc)
+:[K[K# environment
+:[K[KPWD = /home/rgeary1/i220a/submit/lab1/exercises/1-hello
+:[K[K# default
+:[K[K.LOADED := 
+:[K[K# default
+:[K[KLINK.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_MACH)
+:[K[K# default
+:[K[KPREPROCESS.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -F
+:[K[K# automatic
+:[K[K*D = $(patsubst %/,%,$(dir $*))
+:[K[K# environment
+:[K[KXDG_SESSION_CLASS = user
+:[K[K# default
+:[K[KLINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KLINK.s = $(CC) $(ASFLAGS) $(LDFLAGS) $(TARGET_MACH)
+:[K[K# environment
+:[K[KHOME = /home/rgeary1
+:[K[K# environment
+:[K[KJ2REDIR = /usr/lib/jvm/java-8-oracle/jre
+:[K[K# environment
+:[K[KLOGNAME = rgeary1
+:[K[K# environment
+:[K[KJ2SDKDIR = /usr/lib/jvm/java-8-oracle
+:[K[K# automatic
+:[K[K^D = $(patsubst %/,%,$(dir $^))
+:[K[K# environment
+:[K[KMAKELEVEL := 0
+:[K[K# default
+:[K[KCOMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+:[K[K# default
+:[K[KMAKE = $(MAKE_COMMAND)
+:[K[K# environment
+:[K[KSHLVL = 1
+:[K[K# default
+:[K[KAS = as
+:[K[K# default
+:[K[KPREPROCESS.S = $(CC) -E $(CPPFLAGS)
+:[K[K# environment
+:[K[KJAVA_HOME = /usr/lib/jvm/java-8-oracle
+:[K[K# default
+:[K[KCOMPILE.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+:[K[K# environment
+:[K[KXDG_SESSION_ID = 1264
+:[K[K# environment
+:[K[KUSER = rgeary1
+:[K[K# default
+:[K[KFC = f77
+:[K[K# makefile
+:[K[K.DEFAULT_GOAL := 
+:[K[K# automatic
+:[K[K%D = $(patsubst %/,%,$(dir $%))
+:[K[K# default
+:[K[KWEAVE = weave
+:[K[K# default
+:[K[KMAKE_COMMAND := make
+:[K[K# default
+:[K[KLINK.cpp = $(LINK.cc)
+:[K[K# default
+:[K[KF77 = $(FC)
+:[K[K# environment
+:[K[KOLDPWD = /home/rgeary1/i220a/submit/lab1/exercises
+:[K[K# default
+:[K[K.VARIABLES := 
+:[K[K# default
+:[K[KPC = pc
+:[K[K# automatic
+:[K[K*F = $(notdir $*)
+:[K[K# default
+:[K[KCOMPILE.def = $(M2C) $(M2FLAGS) $(DEFFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KLEX = lex
+:[K[K# makefile
+:[K[KMAKEFLAGS = p
+:[K[K# environment
+:[K[KMFLAGS = -p
+:[K[K# environment
+:[K[KSSH_CLIENT = 149.125.112.99 51942 22
+:[K[K# environment
+:[K[KMAIL = /var/mail/rgeary1
+:[K[K# default
+:[K[KLEX.l = $(LEX) $(LFLAGS) -t
+:[K[K# default
+:[K[KLEX.m = $(LEX) $(LFLAGS) -t
+:[K[K# automatic
+:[K[K+D = $(patsubst %/,%,$(dir $+))
+:[K[K# default
+:[K[KCOMPILE.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -c
+:[K[K# automatic
+:[K[K+F = $(notdir $+)
+:[K[K# default
+:[K[KM2C = m2c
+:[K[K# default
+:[K[KMAKEFILES := 
+:[K[K# default
+:[K[KCOMPILE.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+:[K[K# automatic
+:[K[K<F = $(notdir $<)
+:[K[K# environment
+:[K[KVIRTUALENVWRAPPER_SCRIPT = /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+:[K[K# default
+:[K[KCXX = g++
+:[K[K# default
+:[K[KCOFLAGS = 
+:[K[K# default
+:[K[KCOMPILE.C = $(COMPILE.cc)
+:[K[K# automatic
+:[K[K^F = $(notdir $^)
+:[K[K# default
+:[K[KCOMPILE.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(TARGET_MACH) -c
+:[K[K# default
+:[K[KLINK.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# default
+:[K[KSUFFIXES := .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def . :[K[Kh .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el
+:[K[K# default
+:[K[KCOMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+:[K[K# default
+:[K[KCOMPILE.s = $(AS) $(ASFLAGS) $(TARGET_MACH)
+:[K[K# default
+:[K[K.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+:[K[K# environment
+:[K[KDERBY_HOME = /usr/lib/jvm/java-8-oracle/db
+:[K[K# default
+:[K[K.RECIPEPREFIX := 
+:[K[K# default
+:[K[KMAKEINFO = makeinfo
+:[K[K# default
+:[K[KMAKE_TERMERR := /dev/pts/4
+:[K[K# default
+:[K[KOBJC = cc
+:[K[K# default
+:[K[KMAKE_HOST := x86_64-pc-linux-gnu
+:[K[K# default
+:[K[KTEX = tex
+:[K[K# environment
+:[K[KLANG = en_US.UTF-8
+:[K[K# environment
+:[K[KTERM = xterm
+:[K[K# default
+:[K[KF77FLAGS = $(FFLAGS)
+:[K[K# default
+:[K[KLINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+:[K[K# variable set hash-table stats:
+:[K[K# Load=124/1024=12%, Rehash=0, Collisions=15/147=10%
+:[K[K
+:[K[K# Pattern-specific Variable Values
+:[K[K
+:[K[K# No pattern-specific variable values.
+:[K[K
+:[K[K# Directories
+:[K[K
+:[K[K# SCCS: could not be stat'd.
+:[K[K# . (device 62, inode 32869242895): 5 files, 57 impossibilities.
+:[K[K# RCS: could not be stat'd.
+:[K[K
+:[K[K# 5 files, 57 impossibilities in 3 directories.
+:[K[K
+:[K[K# Implicit Rules
+:[K[K
+:[K[K%.out:
+:[K[K
+:[K[K%.a:
+:[K[K
+:[K[K%.ln:
+:[K[K
+:[K[K%.o:
+:[K[K
+:[K[K%: %.o
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.c:
+:[K[K
+:[K[K%: %.c
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.ln: %.c
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINT.c) -C$* $<
+:[K[K
+:[K[K%.o: %.c
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.c) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.cc:
+:[K[K
+:[K[K%: %.cc
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.cc
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.cc) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.C:
+:[K[K
+:[K[K%: %.C
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.C
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.C) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.cpp:
+:[K[K
+:[K[K%: %.cpp
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.cpp
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.cpp) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.p:
+:[K[K
+:[K[K%: %.p
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.p
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.p) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.f:
+:[K[K
+:[K[K%: %.f
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.f
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.f) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.F:
+:[K[K
+:[K[K%: %.F
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.F
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.F) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.f: %.F
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(PREPROCESS.F) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.m:
+:[K[K
+:[K[K%: %.m
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.m
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.m) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.r:
+:[K[K
+:[K[K%: %.r
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.r
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.r) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.f: %.r
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(PREPROCESS.r) $(OUTPUT_OPTION) $<
+:[K[K
+:[K[K%.y:
+:[K[K
+:[K[K%.ln: %.y
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(YACC.y) $< 
+:[K[K         $(LINT.c) -C$* y.tab.c 
+:[K[K         $(RM) y.tab.c
+:[K[K
+:[K[K%.c: %.y
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(YACC.y) $< 
+:[K[K         mv -f y.tab.c $@
+:[K[K
+:[K[K%.l:
+:[K[K
+:[K[K%.ln: %.l
+:[K[K#  recipe to execute (built-in):
+:[K[K        @$(RM) $*.c
+:[K[K         $(LEX.l) $< > $*.c
+:[K[K        $(LINT.c) -i $*.c -o $@
+:[K[K         $(RM) $*.c
+:[K[K
+:[K[K%.c: %.l
+:[K[K#  recipe to execute (built-in):
+:[K[K        @$(RM) $@ 
+:[K[K         $(LEX.l) $< > $@
+:[K[K
+:[K[K%.r: %.l
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LEX.l) $< > $@ 
+:[K[K         mv -f lex.yy.r $@
+:[K[K
+:[K[K%.ym:
+:[K[K
+:[K[K%.m: %.ym
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(YACC.m) $< 
+:[K[K         mv -f y.tab.c $@
+:[K[K
+:[K[K%.yl:
+:[K[K
+:[K[K%.s:
+:[K[K
+:[K[K%: %.s
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.s
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.s) -o $@ $<
+:[K[K
+:[K[K%.S:
+:[K[K
+:[K[K%: %.S
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+:[K[K
+:[K[K%.o: %.S
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.S) -o $@ $<
+:[K[K
+:[K[K%.s: %.S
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(PREPROCESS.S) $< > $@
+:[K[K
+:[K[K%.mod:
+:[K[K
+:[K[K%: %.mod
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.mod) -o $@ -e $@ $^
+:[K[K
+:[K[K%.o: %.mod
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.mod) -o $@ $<
+:[K[K
+:[K[K%.sym:
+:[K[K
+:[K[K%.def:
+:[K[K
+:[K[K%.sym: %.def
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(COMPILE.def) -o $@ $<
+:[K[K
+:[K[K%.h:
+:[K[K
+:[K[K%.info:
+:[K[K
+:[K[K%.dvi:
+:[K[K
+:[K[K%.tex:
+:[K[K
+:[K[K%.dvi: %.tex
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TEX) $<
+:[K[K
+:[K[K%.texinfo:
+:[K[K
+:[K[K%.info: %.texinfo
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+:[K[K
+:[K[K%.dvi: %.texinfo
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+:[K[K
+:[K[K%.texi:
+:[K[K
+:[K[K%.info: %.texi
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+:[K[K
+:[K[K%.dvi: %.texi
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+:[K[K
+:[K[K%.txinfo:
+:[K[K
+:[K[K%.info: %.txinfo
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+:[K[K
+:[K[K%.dvi: %.txinfo
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+:[K[K
+:[K[K%.w:
+:[K[K
+:[K[K%.c: %.w
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CTANGLE) $< - $@
+:[K[K
+:[K[K%.tex: %.w
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CWEAVE) $< - $@
+:[K[K
+:[K[K%.ch:
+:[K[K
+:[K[K%.web:
+:[K[K
+:[K[K%.p: %.web
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TANGLE) $<
+:[K[K
+:[K[K%.tex: %.web
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(WEAVE) $<
+:[K[K
+:[K[K%.sh:
+:[K[K
+:[K[K%: %.sh
+:[K[K#  recipe to execute (built-in):
+:[K[K        cat $< >$@ 
+:[K[K         chmod a+x $@
+:[K[K
+:[K[K%.elc:
+:[K[K
+:[K[K%.el:
+:[K[K
+:[K[K(%): %
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(AR) $(ARFLAGS) $@ $<
+:[K[K
+:[K[K%.out: %
+:[K[K#  recipe to execute (built-in):
+:[K[K        @rm -f $@ 
+:[K[K         cp $< $@
+:[K[K [KESCESC[KESCESC[K [KESCESC[K^?^?[K:[K[K [KESCESC[KESCESC[K
+:[K[K [KESCESC[K^J^J[K:[K[K%.c: %.w %.ch
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CTANGLE) $^ $@
+:[K[K
+:[K[K%.tex: %.w %.ch
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CWEAVE) $^ $@
+:[K[K
+:[K[K%:: %,v
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CHECKOUT,v)
+:[K[K
+:[K[K%:: RCS/%,v
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CHECKOUT,v)
+:[K[K
+:[K[K%:: RCS/%
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(CHECKOUT,v)
+:[K[K
+:[K[K%:: s.%
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+:[K[K
+:[K[K%:: SCCS/s.%
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+:[K[K
+:[K[K# 92 implicit rules, 5 (5.4%) terminal.
+:[K[K
+:[K[K# Files
+:[K[K
+:[K[K# Not a target:
+:[K[K.web.p:
+:[K[K#  Builtin rule
+:[K[K#  Implicit rule search has not been done.
+:[K[K#  Modification time never checked.
+:[K[K#  File has not been updated.
+:[K[K#  recipe to execute (built-in):
+:[K[K        $(TANGLE) $<
+:[K[K[HM%.el:
+[HM
+[HM%.elc:
+[HM
+[HM         chmod a+x $@
+[HM        cat $< >$@ 
+[HM#  recipe to execute (built-in):
+[HM%: %.sh
+[HM
+[HM%.sh:
+[HM
+[HM        $(WEAVE) $<
+[HM#  recipe to execute (built-in):
+[HM%.tex: %.web
+[HM
+[HM        $(TANGLE) $<
+[HM#  recipe to execute (built-in):
+[HM%.p: %.web
+[HM
+[HM%.web:
+[HM
+[HM%.ch:
+[HM
+[HM        $(CWEAVE) $< - $@
+[HM#  recipe to execute (built-in):
+[HM%.tex: %.w
+[HM
+[HM        $(CTANGLE) $< - $@
+[HM#  recipe to execute (built-in):
+[HM%.c: %.w
+[HM
+[HM%.w:
+[HM
+[HM        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+[HM#  recipe to execute (built-in):
+[HM%.dvi: %.txinfo
+[HM
+[HM        $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+[HM#  recipe to execute (built-in):
+[HM%.info: %.txinfo
+[HM
+[HM%.txinfo:
+[HM
+[HM        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+[HM#  recipe to execute (built-in):
+[HM%.dvi: %.texi
+[HM
+[HM        $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+[HM#  recipe to execute (built-in):
+[HM%.info: %.texi
+[51;1H[K:[K[K[?1l>[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/1-hello$ make -p | lessgrep './c'[6Pless[Kcd ../2-err/
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ make
+Makefile:2: *** missing separator.  Stop.
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ ls
+Makefile
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ vim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 8L, 90C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
+[1m[37m[41m                echo "hello $$USER"[m
+
+
+[33m.PHONY:[m[9Ccount-bin
+[36mcount-bin:[m
+[31m                cd /usr/bin ;
+                ls | wc -l[m
+[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[51;66H~@k[1;1H[51;66H   [2;1H[51;76H2[2;1H[?25h[?25l[51;66H~@k[2;1H[51;66H   [2;2H[51;78H2[2;2H[?25h[?25l[51;66H~@k[2;2H[51;66H   [2;8H[51;78H3-8[2;8H[?25h[?25l[51;66H~@k[2;8H[51;66H   [2;16H[51;78H4-16[2;16H[?25h[?25l[51;66H~@k[2;16H[51;66H   [2;17H[51;78H5-17[2;17H[?25h[?25l[51;66H~@k[2;17H[51;66H   [2;18H[51;78H6-18[2;18H[?25h[?25l[51;66H~@k[2;18H[51;66H   [2;19H[51;78H7-19[2;19H[?25h[?25l[51;66H~@k[2;19H[51;66H   [2;20H[51;78H8-20[2;20H[?25h[?25l[51;66H~@k[2;20H[51;66H   [2;21H[51;78H9-21[2;21H[?25h[?25l[51;66H~@k[2;21H[51;66H   [2;20H[51;78H8-20[2;20H[?25h[?25l[51;66H~@k[2;20H[51;66H   [2;19H[51;78H7-19[2;19H[?25h[?25l[51;66H~@k[2;19H[51;66H   [2;18H[51;78H6-18[2;18H[?25h[?25l[51;66H~@k[2;18H[51;66H   [2;17H[51;78H5-17[2;17H[?25h[?25l[51;66H~@k[2;17H[51;66H   [2;16H[51;78H4-16[2;16H[?25h[?25l[51;66H~@k[2;16H[51;66H   [2;8H[51;78H3-8 [2;8H[?25h[?25l[51;66H~@k[2;8H[51;66H   [2;16H[51;78H4-16[2;16H[?25h[?25l[51;66Hi[2;16H[51;66H [2;9H[51;1H[1m-- INSERT --[m[51;13H[K[51;76H2,4-9[9CAll[2;9H[?25h[?25l[51;78H5-17[2;17H[?25h[?25l[51;76H3,1   [3;1H[?25h[?25l[51;76H2,5-17[2;17H[?25h[?25l[2;9H[1m[37m[41mecho "hello $$USER"[m[2;28H[K[51;78H4-9 [2;9H[?25h[?25l[2;3H[1m[37m[41mecho "hello $$USER"[m[2;22H[K[51;78H3  [2;3H[?25h[?25l[1m[37m[41mecho "hello $$USER"[m[2;21H[K[51;78H2[2;2H[?25h[?25lecho [31m"hello [m[36m$$[m[31mUSER"[m[2;20H[K[51;78H1[2;1H[?25h[?25l[31m        echo "hello [m[36m$$[m[31mUSER"[m[51;78H2-9[2;9H[?25h[?25l[31m        echo "hello [m[36m$$[m[31mUSER"[m[51;78H3-17[2;17H[?25h[51;1H[K[2;16H[?25l[51;66H^[[2;16H[51;66H  [2;17H[51;76H2,2-16[8CAll[2;16H[?25h[?25l[51;66H:[2;16H[51;66H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 88C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ vim Makefile ls[Kmake
+echo "hello $USER"
+hello rgeary1
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ makevim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 8L, 88C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
+[31m                echo "hello [m[36m$$[m[31mUSER"[m
+
+
+[33m.PHONY:[m[9Ccount-bin
+[36mcount-bin:[m
+[31m                cd /usr/bin ;
+                ls | wc -l[m
+[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H2,2-16[8CAll[2;16H[?25h[?1000l[?1002h[?25l[51;66H:[2;16H[51;1H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 88C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ vim Makefile make[Kvim Makefile [Kcd /usr/bin
+rgeary1@remote04:/usr/bin$ ls | wc -l
+4284
+rgeary1@remote04:/usr/bin$ cd ~/i220a/e[Ksubmit/lab1/exercises/2-err/
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ make count-bin
+cd /usr/bin ;
+ls | wc -l
+1
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ make count-bincd ~/i220a/submit/lab1/exercises/2-err/ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls | wc -l[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd /usr/binvim Makefile make[Kvim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 8L, 88C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mall:[m
+[31m                echo "hello [m[36m$$[m[31mUSER"[m
+
+
+[33m.PHONY:[m[9Ccount-bin
+[36mcount-bin:[m
+[31m                cd /usr/bin ;
+                ls | wc -l[m
+[1m[34m~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H2,2-16[8CAll[2;16H[?25h[?1000l[?1002h[?25l[51;66H~@k[2;16H[51;66H   [3;1H[51;76H3,0-1 [3;1H[?25h[?25l[51;66H~@k[3;1H[51;66H   [4;1H[51;76H4[4;1H[?25h[?25l[51;66H~@k[4;1H[51;66H   [5;16H[51;76H5,9-16[5;16H[?25h[?25l[51;66H~@k[5;16H[51;66H   [6;10H[51;76H6,10  [6;10H[?25h[?25l[51;66H~@k[6;10H[51;66H   [7;16H[51;76H7,2-16[7;16H[?25h[?25l[51;78H15-29[7;29H[?25h[?25l[51;66Hi[7;29H[51;66H [7;29H[51;1H[1m-- INSERT --[m[51;13H[K[51;76H7,15-29[7CAll[7;29H[?25h[?25l[51;79H6-30[7;30H[?25h[?25l[31m [m[51;79H7-31[7;31H[?25h[?25l[7;30H[K[51;79H6-30[7;30H[?25h[?25l[31m [m[51;79H7-31[7;31H[?25h[?25l[31m/[m[51;79H8-32[7;32H[?25h[?25l[7;31H[K[51;79H7-31[7;31H[?25h[?25l[35m\[m[51;79H8-32[7;32H[?25h[51;1H[K[7;31H[?25l[51;66H^[[7;31H[51;66H  [7;32H[51;76H7,17-31[7CAll[7;31H[?25h[?25l[51;66H:[7;31H[51;66H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 8L, 90C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ vim Makefile make count-bin
+cd /usr/bin ; \
+	ls | wc -l
+4284
+rgeary1@remote04:~/i220a/submit/lab1/exercises/2-err$ cd ../3-multifile/
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ ;[Kls
+main.c	Makefile  quadr.c  quadr.h  README  test.data
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ vim README 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"README" 2L, 129C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1HThis directory contains a simple quadratic equation solver used to
+illustrate the use of `make` to compile a multi-file project.
+[1m[34m~                                                                                            [4;1H~                                                                                            [5;1H~                                                                                            [6;1H~                                                                                            [7;1H~                                                                                            [8;1H~                                                                                            [9;1H~                                                                                            [10;1H~                                                                                            [11;1H~                                                                                            [12;1H~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[51;66H^[[1;1H[51;66H  [1;1H[51;66H^[[1;1H[51;66H  [1;1H[?25h[?25l[51;66H:[1;1H[51;1H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"README" 2L, 129C written\[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ make
+cc -g -Wall -std=c11   -c -o quadr.o quadr.c
+cc -g -Wall -std=c11   -c -o main.o main.c
+cc  quadr.o main.o -o quadr
+/usr/bin/ld: quadr.o: in function `quadratic_roots':
+/home/rgeary1/i220a/submit/lab1/exercises/3-multifile/quadr.c:10: undefined reference to `sqrt'
+/usr/bin/ld: /home/rgeary1/i220a/submit/lab1/exercises/3-multifile/quadr.c:11: undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:7: quadr] Error 1
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ vim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 11L, 173C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mPROJECT [m= quadr
+
+[36mCFLAGS [m= -g -Wall -std=c11
+[36mLDFLAGS [m=
+
+[36m$(PROJECT):[m     quadr.o main.o
+[31m                [m[36m$(CC)[m[31m [m[36m$(LDFLAGS)[m[31m quadr.o main.o -o [m[36m$@
+
+clean:[m
+[31m                rm -f *.o [m[36m$(PROJECT)[m[31m [m[36m$(PROJECT)[m[31m.tar.gz[m
+
+[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[51;66H~@k[1;1H[51;66H   [2;1H[51;76H2,0-1[2;1H[?25h[?25l[51;66H~@k[2;1H[51;66H   [3;1H[51;76H3,1  [3;1H[?25h[?25l[51;66H~@k[3;1H[51;66H   [4;1H[51;76H4[4;1H[?25h[?25l[51;66H~@k[4;1H[51;66H   [4;2H[51;78H2[4;2H[?25h[?25l[51;66H~@k[4;2H[51;66H   [4;3H[51;78H3[4;3H[?25h[?25l[51;66H~@k[4;3H[51;66H   [4;4H[51;78H4[4;4H[?25h[?25l[51;66H~@k[4;4H[51;66H   [4;5H[51;78H5[4;5H[?25h[?25l[51;66H~@k[4;5H[51;66H   [4;6H[51;78H6[4;6H[?25h[?25l[51;66H~@k[4;6H[51;66H   [4;7H[51;78H7[4;7H[?25h[?25l[51;66H~@k[4;7H[51;66H   [4;8H[51;78H8[4;8H[?25h[?25l[51;66H~@k[4;8H[51;66H   [4;9H[51;78H9[4;9H[?25h[?25l[51;66H~@k[4;9H[51;66H   [4;10H[51;78H10[4;10H[?25h[?25l[51;66H~@k[4;10H[51;66H   [4;10H[?25h[?25l[51;66H<20>[4;10H[51;66H    [5;1H[51;76H5,0-1[5;1H[?25h[?25l[51;66H~@k[5;1H[51;66H   [4;10H[51;76H4,10 [4;10H[?25h[?25l[51;66H^I[4;10H[51;66H  [4;10H[?25h[?25l[51;66H<20>[4;10H[51;66H    [5;1H[51;76H5,0-1[5;1H[?25h[?25l[51;66H~@k[5;1H[51;66H   [4;10H[51;76H4,10 [4;10H[?25h[?25l[51;66Hi[4;10H[51;66H [4;10H[51;1H[1m-- INSERT --[m[51;13H[K[51;76H4,10[10CAll[4;10H[?25h[?25l[51;79H1[4;11H[?25h[?25l[51;76H7,20-34[7;34H[?25h[?25l[7m[31mquad[m[51;11H[1mVISUAL --[m[51;76H[K[51;66H5[7;38H[51;76H7,24-38[7CAll[7;38H[?25h[?25l[51;4H[1m(insert)I VISUAL- --[m[51;66H[K[51;66H5[7;38H[51;76H7,24-38[7CAll[7;38H[?25h[?25l[51;66H [7;34H[51;4H[1mINSERTt --[m[51;13H[K[51;76H7,20-34[7CAll[7;34H[31mquad[?25h[?25lquadr.o main.o -o [m[36m$@[m[7;53H[K[7;24H[36m[46m([7C)[m[51;78H19-33[7;33H[?25h[?25l[36m[46mq[m[36muadr.o main.o -o $@[m[7;52H[K[10;1H[36m                rm -f *.o [10C [10C.tar.gz[7;24H([7Cq[m[51;79H8-32[7;32H[?25h[?25l[36mquadr.o main.o -o $@[m[7;51H[K[51;79H7-31[7;31H[?25h[?25l[36mquadr.o main.o -o $@[m[7;50H[K[51;79H6-30[7;30H[?25h[?25l[36mquadr.o main.o -o $@[m[7;49H[K[51;79H5-29[7;29H[?25h[?25l[36mquadr.o main.o -o $@[m[7;48H[K[51;79H4-28[7;28H[?25h[?25l[36mquadr.o main.o -o $@[m[7;47H[K[51;79H3-27[7;27H[?25h[?25l[36mquadr.o main.o -o $@[m[7;46H[K[51;79H2-26[7;26H[?25h[?25l[36mquadr.o main.o -o $@[m[7;45H[K[51;79H1-25[7;25H[?25h[?25l[36mq[m[31muadr.o main.o -o [m[36m$@[m[7;44H[K[10;1H[31m                rm -f *.o [10C [10C.tar.gz[m[51;79H0-24[7;24H[?25h[?25l[31mquadr.o main.o -o [m[36m$@[m[7;43H[K[51;78H9-23 [7;23H[?25h[?25l[51;78H27-41[7;41H[?25h[?25l[1C[36m$[m[31m@[m[51;79H8-42[7;42H[?25h[?25l[36m($@
+
+
+                rm -f *.o [10C [10C.tar.gz[m[51;79H9-43[7;43H[?25h[?25l[36mL$@[m[51;78H30-44[7;44H[?25h[?25l[36mD$@[m[51;79H1-45[7;45H[?25h[?25l[36mF$@[m[51;79H2-46[7;46H[?25h[?25l[36mL$@[m[51;79H3-47[7;47H[?25h[?25l[36mA$@[m[51;79H4-48[7;48H[?25h[?25l[36mG$@[m[51;79H5-49[7;49H[?25h[?25l[36mS$@[m[51;79H6-50[7;50H[?25h[?25l[36m)$@[m
+
+
+[31m                rm -f *.o [10C [10C.tar.gz[m[7;42H[36m[46m([7C)[m[51;79H7-51[7;51H[?25h[?25l[31m [m[36m$@[7;42H([7C)[m[51;79H8-52[7;52H[?25h[51;1H[K[7;51H[?25l[51;66H^[[7;51H[51;66H  [7;52H[51;76H7,37-51[7CAll[7;51H[?25h[?25l[51;66H:[7;51H[51;66H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 11L, 174C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ make
+cc quadr.o main.o -o  quadr
+/usr/bin/ld: quadr.o: in function `quadratic_roots':
+/home/rgeary1/i220a/submit/lab1/exercises/3-multifile/quadr.c:10: undefined reference to `sqrt'
+/usr/bin/ld: /home/rgeary1/i220a/submit/lab1/exercises/3-multifile/quadr.c:11: undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:7: quadr] Error 1
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ makevim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 11L, 174C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mPROJECT [m= quadr
+
+[36mCFLAGS [m= -g -Wall -std=c11
+[36mLDFLAGS [m=
+
+[36m$(PROJECT):[m     quadr.o main.o
+[31m                [m[36m$(CC)[m[31m quadr.o main.o -o [m[36m$(LDFLAGS)[m[31m [m[36m$@
+
+clean:[m
+[31m                rm -f *.o [m[36m$(PROJECT)[m[31m [m[36m$(PROJECT)[m[31m.tar.gz[m
+
+[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H7,37-51[7CAll[7;51H[?25h[?1000l[?1002h[?25l[51;66Hi[7;51H[51;66H [7;51H[51;1H[1m-- INSERT --[m[51;13H[K[51;76H7,37-51[7CAll[7;51H[?25h[?25l[36m $@[m[7;53H[K[10;1H[36m                rm -f *.o [10C [10C.tar.gz[m[51;79H6-50[7;50H[?25h[?25l[36m $@[m[7;52H[K[51;79H5-49[7;49H[?25h[?25l[36m $@[m[7;51H[K[51;79H4-48[7;48H[?25h[?25l[36m $@[m[7;50H[K[51;79H3-47[7;47H[?25h[?25l[36m $@[m[7;49H[K[51;79H2-46[7;46H[?25h[?25l[36m $@[m[7;48H[K[51;79H1-45[7;45H[?25h[?25l[36m $@[m[7;47H[K[51;79H0-44[7;44H[?25h[?25l[36m $@[m[7;46H[K[51;78H29-43[7;43H[?25h[?25l[36m $@[m[7;45H[K[10;1H[31m                rm -f *.o [10C [10C.tar.gz[m[51;79H8-42[7;42H[?25h[?25l[31m [m[36m$@[m[7;44H[K[51;79H7-41[7;41H[?25h[?25l[51;79H6-40[7;40H[?25h[?25l[51;79H5-39[7;39H[?25h[?25l[51;79H4-38[7;38H[?25h[?25l[51;79H3-37[7;37H[?25h[?25l[51;79H2-36[7;36H[?25h[?25l[51;79H1-35[7;35H[?25h[?25l[51;79H0-34[7;34H[?25h[?25l[51;78H19-33[7;33H[?25h[?25l[51;79H8-32[7;32H[?25h[?25l[51;79H7-31[7;31H[?25h[?25l[51;79H6-30[7;30H[?25h[?25l[51;79H5-29[7;29H[?25h[?25l[51;79H4-28[7;28H[?25h[?25l[51;79H3-27[7;27H[?25h[?25l[51;79H2-26[7;26H[?25h[?25l[51;79H1-25[7;25H[?25h[?25l[51;79H0-24[7;24H[?25h[?25l[51;78H9-23 [7;23H[?25h[?25l[36m$q[m[31muadr.o main.o -o  [m[36m$@[m[51;78H10-24[7;24H[?25h[?25l[36m(quadr.o main.o -o  $@
+
+
+                rm -f *.o [10C [10C.tar.gz[m[51;79H1-25[7;25H[?25h[?25l[36mLquadr.o main.o -o  $@[m[51;79H2-26[7;26H[?25h[?25l[36mDquadr.o main.o -o  $@[m[51;79H3-27[7;27H[?25h[?25l[36mFquadr.o main.o -o  $@[m[51;79H4-28[7;28H[?25h[?25l[36mLquadr.o main.o -o  $@[m[51;79H5-29[7;29H[?25h[?25l[36mAquadr.o main.o -o  $@[m[51;79H6-30[7;30H[?25h[?25l[36mGquadr.o main.o -o  $@[m[51;79H7-31[7;31H[?25h[?25l[36mSquadr.o main.o -o  $@[m[51;79H8-32[7;32H[?25h[?25l[36m)[m[31mquadr.o main.o -o  [m[36m$@[m
+
+
+[31m                rm -f *.o [10C [10C.tar.gz[m[7;24H[36m[46m([7C)[m[51;79H9-33[7;33H[?25h[?25l[31m quadr.o main.o -o  [m[36m$@[7;24H([7C)[m[51;78H20-34[7;34H[?25h[?25l[51;76H4,12   [4;12H[?25h[?25l-[51;79H3[4;13H[?25h[?25ll[51;79H4[4;14H[?25h[?25lm[51;79H5[4;15H[?25h[?25l[51;76H7,20-34[7;34H[?25h[?25l[31mquadr.o main.o -o [m[1C[36m$@[m[7;54H[K[7;24H[36m[46m([7C)[m[51;78H19-33[7;33H[?25h[?25l[36m[46mq[m[36muadr.o main.o -o  $@[m[7;53H[K[10;1H[36m                rm -f *.o [10C [10C.tar.gz[7;24H([7Cq[m[51;79H8-32[7;32H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;52H[K[51;79H7-31[7;31H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;51H[K[51;79H6-30[7;30H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;50H[K[51;79H5-29[7;29H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;49H[K[51;79H4-28[7;28H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;48H[K[51;79H3-27[7;27H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;47H[K[51;79H2-26[7;26H[?25h[?25l[36mquadr.o main.o -o  $@[m[7;46H[K[51;79H1-25[7;25H[?25h[?25l[36mq[m[31muadr.o main.o -o  [m[36m$@[m[7;45H[K[10;1H[31m                rm -f *.o [10C [10C.tar.gz[m[51;79H0-24[7;24H[?25h[?25l[31mquadr.o main.o -o [m[1C[36m$@[m[7;44H[K[51;78H9-23 [7;23H[?25h[?25l[51;78H27-41[7;41H[?25h[?25l[36m$ $@[m[51;79H8-42[7;42H[?25h[?25l[36m( $@
+
+
+                rm -f *.o [10C [10C.tar.gz[m[51;79H9-43[7;43H[?25h[?25l[36mL $@[m[51;78H30-44[7;44H[?25h[?25l[36mD $@[m[51;79H1-45[7;45H[?25h[?25l[36mF $@[m[51;79H2-46[7;46H[?25h[?25l[36mL $@[m[51;79H3-47[7;47H[?25h[?25l[36mA $@[m[51;79H4-48[7;48H[?25h[?25l[36mG $@[m[51;79H5-49[7;49H[?25h[?25l[36mS $@[m[51;79H6-50[7;50H[?25h[?25l[36m)[m[31m [m[36m$@[m
+
+
+[31m                rm -f *.o [10C [10C.tar.gz[m[7;42H[36m[46m([7C)[m[51;79H7-51[7;51H[?25h[?25l[1C[31m [m[36m$@[7;42H([7C)[m[51;79H8-52[7;52H[?25h[51;1H[K[7;51H[?25l[51;66H^[[7;51H[51;66H  [7;52H[51;76H7,37-51[7CAll[7;51H[?25h[?25l[51;66HL[7;51H[51;66H [11;1H[51;76H11,0-1 [11;1H[?25h[?25l[51;66H~@k[11;1H[51;66H   [10;54H[51;77H0,40-54[10;54H[?25h[?25l[51;66H:[10;54H[51;66H[K[51;1H:[?2004h[?25he[?25l[?25hq[?25l[?25h[?25l[51;3H[K[51;3H[?25h[?25l[51;2H[K[51;2H[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 11L, 178C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ vim Makefile make[K
+cc quadr.o main.o -o -lm  quadr
+[01m[Kcc:[m[K [01;31m[Kerror: [m[Kquadr: No such file or directory
+make: *** [Makefile:7: quadr] Error 1
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ makevim Makefile 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[51;1H"Makefile" 11L, 178C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[36mPROJECT [m= quadr
+
+[36mCFLAGS [m= -g -Wall -std=c11
+[36mLDFLAGS [m=  -lm
+
+[36m$(PROJECT):[m     quadr.o main.o
+[31m                [m[36m$(CC)[m[31m quadr.o main.o -o [m[36m$(LDFLAGS)[m[31m  [m[36m$@
+
+clean:[m
+[31m                rm -f *.o [m[36m$(PROJECT)[m[31m [m[36m$(PROJECT)[m[31m.tar.gz[m
+
+[1m[34m~                                                                                            [13;1H~                                                                                            [14;1H~                                                                                            [15;1H~                                                                                            [16;1H~                                                                                            [17;1H~                                                                                            [18;1H~                                                                                            [19;1H~                                                                                            [20;1H~                                                                                            [21;1H~                                                                                            [22;1H~                                                                                            [23;1H~                                                                                            [24;1H~                                                                                            [25;1H~                                                                                            [26;1H~                                                                                            [27;1H~                                                                                            [28;1H~                                                                                            [29;1H~                                                                                            [30;1H~                                                                                            [31;1H~                                                                                            [32;1H~                                                                                            [33;1H~                                                                                            [34;1H~                                                                                            [35;1H~                                                                                            [36;1H~                                                                                            [37;1H~                                                                                            [38;1H~                                                                                            [39;1H~                                                                                            [40;1H~                                                                                            [41;1H~                                                                                            [42;1H~                                                                                            [43;1H~                                                                                            [44;1H~                                                                                            [45;1H~                                                                                            [46;1H~                                                                                            [47;1H~                                                                                            [48;1H~                                                                                            [49;1H~                                                                                            [50;1H~                                                                                            [m[51;76H10,40-54      All[10;54H[?25h[?1000l[?1002h[?25l[51;76H7,26-40 [7;40H[?25h[?25l[51;66Hi[7;40H[51;66H [7;40H[51;1H[1m-- INSERT --[m[51;13H[K[51;76H7,26-40[7CAll[7;40H[?25h[?25l[31m [m[36m$(LDFLAGS)[m[31m [m[1C[36m$@[m[7;54H[K[51;79H5-39[7;39H[?25h[?25l[31m [m[36m$(LDFLAGS)[m[31m [m[1C[36m$@[m[7;53H[K[51;79H4-38[7;38H[?25h[?25l[2C[36m[46m([7C)[m[51;78H35-49[7;49H[?25h[?25l[31m-  [m[36m$@[7;40H([7C)[m[51;79H6-50[7;50H[?25h[?25l[31m [m[1C[36m$@[m[7;53H[K[7;40H[36m[46m([7C)[m[51;79H5-49[7;49H[?25h[?25l[2C[31m [m[36m$@[7;40H([7C)[m[51;79H6-50[7;50H[?25h[?25l[31m-  [m[36m$@[m[51;79H7-51[7;51H[?25h[?25l[31mo  [m[36m$@[m[51;79H8-52[7;52H[?25h[51;1H[K[7;51H[?25l[51;66H^[[7;51H[51;66H  [7;52H[51;76H7,37-51[7CAll[7;51H[?25h[?25l[51;66H:[7;51H[51;66H[K[51;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"Makefile" 11L, 179C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ make
+cc quadr.o main.o  -lm -o  quadr
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ ./quadr test.data
+a = 2, b = 6, c = 4, root1 = -1, root2 = -2
+a = 1, b = 5, c = -2, root1 = 0.372281, root2 = -5.37228
+a = 2, b = 3, c = 4, root1 = -nan, root2 = -nan
+test.data:4: must have 3 doubles: bad input line 1 2+ 3
+rgeary1@remote04:~/i220a/submit/lab1/exercises/3-multifile$ exit
+
+Script done on 2020-09-02 19:13:57-04:00 [COMMAND_EXIT_CODE="0"]
