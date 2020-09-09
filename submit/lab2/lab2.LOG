@@ -1,0 +1,577 @@
+Script started on 2020-09-09 16:03:41-04:00 [TERM="xterm" TTY="/dev/pts/9" COLUMNS="117" LINES="62"]
+bash: /home/umrigar/cs240/bin/student.rc: No such file or directory
+rgeary1@remote07:~/i220a/submit/lab2$ cd exercises/1-hello-args/
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ls -l
+total 12
+-rw-r----- 1 rgeary1 rgeary1 343 Sep  9 16:01 hello.c
+-rw-r----- 1 rgeary1 rgeary1  35 Sep  9 16:01 Makefile
+-rw-r----- 1 rgeary1 rgeary1  61 Sep  9 16:01 README
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ vim README 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"README" 1L, 61C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1HPrint out a line saying hello to each command-line argument.
+[1m[34m~                                                                                                                    [3;1H~                                                                                                                    [4;1H~                                                                                                                    [5;1H~                                                                                                                    [6;1H~                                                                                                                    [7;1H~                                                                                                                    [8;1H~                                                                                                                    [9;1H~                                                                                                                    [10;1H~                                                                                                                    [11;1H~                                                                                                                    [12;1H~                                                                                                                    [13;1H~                                                                                                                    [14;1H~                                                                                                                    [15;1H~                                                                                                                    [16;1H~                                                                                                                    [17;1H~                                                                                                                    [18;1H~                                                                                                                    [19;1H~                                                                                                                    [20;1H~                                                                                                                    [21;1H~                                                                                                                    [22;1H~                                                                                                                    [23;1H~                                                                                                                    [24;1H~                                                                                                                    [25;1H~                                                                                                                    [26;1H~                                                                                                                    [27;1H~                                                                                                                    [28;1H~                                                                                                                    [29;1H~                                                                                                                    [30;1H~                                                                                                                    [31;1H~                                                                                                                    [32;1H~                                                                                                                    [33;1H~                                                                                                                    [34;1H~                                                                                                                    [35;1H~                                                                                                                    [36;1H~                                                                                                                    [37;1H~                                                                                                                    [38;1H~                                                                                                                    [39;1H~                                                                                                                    [40;1H~                                                                                                                    [41;1H~                                                                                                                    [42;1H~                                                                                                                    [43;1H~                                                                                                                    [44;1H~                                                                                                                    [45;1H~                                                                                                                    [46;1H~                                                                                                                    [47;1H~                                                                                                                    [48;1H~                                                                                                                    [49;1H~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[62;90H^[[1;1H[62;90H  [1;1H[62;90H^[[1;1H[62;90H  [1;1H[?25h[?25l[62;90H:[1;1H[62;1H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"README" 1L, 61C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ make
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ./'[Khello
+usage: ./hello NAME...
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ./hello bart lisa
+hello bart
+hello lisa
+hello (null)
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ 
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) start bart list[Ka
+Temporary breakpoint 1 at 0x118b: file hello.c, line 13.
+Starting program: /import/linux/home1/rgeary1/projects/i220a/submit/lab2/exercises/1-hello-args/hello bart lisa
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe838) at hello.c:13
+13	  if (argc == 1) {
+(gdb) l
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+12	{
+13	  if (argc == 1) {
+14	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+15	    exit(1);
+16	  }
+17	  else {
+(gdb) 
+18	    for (int i = 1; i <= argc; i++) {
+19	      say_hello(argv[i]);
+20	    }
+21	  }
+22	  return 0;
+23	}
+(gdb) b say_hello[K[K[K[K[K[K_hello 
+Breakpoint 2 at 0x555555555161: file hello.c, line 7.
+(gdb) p argc
+$1 = 3
+(gdb) p argv
+$2 = (const char **) 0x7fffffffe838
+(gdb) p argv[0]
+$3 = 0x7fffffffeaa8 "/import/linux/home1/rgeary1/projects/i220a/submit/lab2/exercises/1-hello-args/hello"
+(gdb) p argv[0][K[K1]
+$4 = 0x7fffffffeafc "bart"
+(gdb) p argv[1][K[K2
+A syntax error in expression, near `'.
+(gdb) p argv[2]
+$5 = 0x7fffffffeb01 "lisa"
+(gdb) n
+18	    for (int i = 1; i <= argc; i++) {
+(gdb) n\[K
+19	      say_hello(argv[i]);
+(gdb) p i
+$6 = 1
+(gdb) c say_hello [K()
+Not stopped at any breakpoint; argument ignored.
+Continuing.
+
+Breakpoint 2, say_hello (name=0x7fffffffeafc "bart") at hello.c:7
+7	  printf("hello %s\n", name);
+(gdb) l
+2	#include <stdlib.h>
+3	
+4	static void
+5	say_hello(const char *name)
+6	{
+7	  printf("hello %s\n", name);
+8	}
+9	
+10	int 
+11	main(int argc, const char *argv[])
+(gdb) p name
+$7 = 0x7fffffffeafc "bart"
+(gdb) backtrace
+#0  say_hello (name=0x7fffffffeafc "bart") at hello.c:7
+#1  0x00005555555551e5 in main (argc=3, argv=0x7fffffffe838) at hello.c:19
+(gdb) p argc
+No symbol "argc" in current context.
+(gdb) up
+#1  0x00005555555551e5 in main (argc=3, argv=0x7fffffffe838) at hello.c:19
+19	      say_hello(argv[i]);
+(gdb) p argc
+$8 = 3
+(gdb) p i
+$9 = 1
+(gdb) down
+#0  say_hello (name=0x7fffffffeafc "bart") at hello.c:7
+7	  printf("hello %s\n", name);
+(gdb) p name
+$10 = 0x7fffffffeafc "bart"
+(gdb) c say_hello()
+Too few arguments in function call.
+(gdb) c say_hello()[K[K[K[K[K[K[K[K[K[K[K
+Continuing.
+hello bart
+
+Breakpoint 2, say_hello (name=0x7fffffffeb01 "lisa") at hello.c:7
+7	  printf("hello %s\n", name);
+(gdb) p name
+$11 = 0x7fffffffeb01 "lisa"
+(gdb) c
+Continuing.
+hello lisa
+
+Breakpoint 2, say_hello (name=0x0) at hello.c:7
+7	  printf("hello %s\n", name);
+(gdb) p[[K name
+$12 = 0x0
+(gdb) up
+#1  0x00005555555551e5 in main (argc=3, argv=0x7fffffffe838) at hello.c:19
+19	      say_hello(argv[i]);
+(gdb) p i
+$13 = 3
+(gdb) p argc
+$14 = 3
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1176291] will be killed.
+
+Quit anyway? (y or n) y
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ls -l
+total 32
+-rwxr-x--- 1 rgeary1 rgeary1 19360 Sep  9 16:04 hello
+-rw-r----- 1 rgeary1 rgeary1   343 Sep  9 16:01 hello.c
+-rw-r----- 1 rgeary1 rgeary1    35 Sep  9 16:01 Makefile
+-rw-r----- 1 rgeary1 rgeary1    61 Sep  9 16:04 README
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ vim hello.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"hello.c" 23L, 343C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+
+[32mstatic[m [32mvoid[m
+say_hello([32mconst[m [32mchar[m *name)
+{
+  printf([31m"hello [m[35m%s\n[m[31m"[m, name);
+}
+
+[32mint[m
+main([32mint[m argc, [32mconst[m [32mchar[m *argv[])
+{
+  [33mif[m (argc == [31m1[m) {
+    fprintf([31mstderr[m, [31m"usage: [m[35m%s[m[31m NAME...[m[35m\n[m[31m"[m, argv[[31m0[m]);
+    exit([31m1[m);
+  }
+  [33melse[m {
+    [33mfor[m ([32mint[m i = [31m1[m; i <= argc; i++) {[19;7Hsay_hello(argv[i]);
+    }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                    [25;1H~                                                                                                                    [26;1H~                                                                                                                    [27;1H~                                                                                                                    [28;1H~                                                                                                                    [29;1H~                                                                                                                    [30;1H~                                                                                                                    [31;1H~                                                                                                                    [32;1H~                                                                                                                    [33;1H~                                                                                                                    [34;1H~                                                                                                                    [35;1H~                                                                                                                    [36;1H~                                                                                                                    [37;1H~                                                                                                                    [38;1H~                                                                                                                    [39;1H~                                                                                                                    [40;1H~                                                                                                                    [41;1H~                                                                                                                    [42;1H~                                                                                                                    [43;1H~                                                                                                                    [44;1H~                                                                                                                    [45;1H~                                                                                                                    [46;1H~                                                                                                                    [47;1H~                                                                                                                    [48;1H~                                                                                                                    [49;1H~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[62;101H8,25[18;25H[?25h[?25l[62;90H~@k[18;25H[62;90H   [18;24H[62;104H4[18;24H[?25h[?25l[62;90H~@k[18;24H[62;90H   [17;8H[46m{[21;3H}[m[62;101H7,8 [17;8H[?25h[?25l[62;90H~@k[17;8H[62;90H   [18;24H[17;8H{[21;3H}[62;101H8,24[18;24H[?25h[?25l[62;90H~@k[18;24H[62;90H   [18;25H[62;104H5[18;25H[?25h[?25l[62;90Hi[18;25H[62;90H [18;25H[62;1H[1m-- INSERT --[m[62;13H[K[62;100H18,25[9CAll[18;25H[?25h[?25l argc; i++) {[18;37H[K[62;104H4[18;24H[?25h[62;1H[K[18;23H[?25l[62;90H^[[18;23H[62;90H  [18;24H[62;100H18,23[9CAll[18;23H[?25h[?25l[62;90H:[18;23H[62;90H[K[62;1H:[?2004h[?25hw[?25l[?25hs[?25l[?25hq[?25l[?25h[?25l[62;4H[K[62;4H[?25h[?25l[62;3H[K[62;3H[?25hq[?25l[?25h[?25l[?1002l[?2004l"hello.c" 23L, 342C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ make
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ./hello bart lisa
+hello bart
+hello lisa
+rgeary1@remote07:~/i220a/submit/lab2/exercises/1-hello-args$ ./[K[Kcd ..
+rgeary1@remote07:~/i220a/submit/lab2/exercises$ cd 2-hello-upcase-args/
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ls -l
+total 12
+-rw-r----- 1 rgeary1 rgeary1 962 Sep  9 16:01 hello.c
+-rw-r----- 1 rgeary1 rgeary1  35 Sep  9 16:01 Makefile
+-rw-r----- 1 rgeary1 rgeary1 161 Sep  9 16:01 README
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ vim README 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"README" 4L, 161C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1HPrint out a line saying hello to each command-line argument.  Try to be
+intelligent by upcasing the first character of each word in each
+command-line argument.
+
+[1m[34m~                                                                                                                    [6;1H~                                                                                                                    [7;1H~                                                                                                                    [8;1H~                                                                                                                    [9;1H~                                                                                                                    [10;1H~                                                                                                                    [11;1H~                                                                                                                    [12;1H~                                                                                                                    [13;1H~                                                                                                                    [14;1H~                                                                                                                    [15;1H~                                                                                                                    [16;1H~                                                                                                                    [17;1H~                                                                                                                    [18;1H~                                                                                                                    [19;1H~                                                                                                                    [20;1H~                                                                                                                    [21;1H~                                                                                                                    [22;1H~                                                                                                                    [23;1H~                                                                                                                    [24;1H~                                                                                                                    [25;1H~                                                                                                                    [26;1H~                                                                                                                    [27;1H~                                                                                                                    [28;1H~                                                                                                                    [29;1H~                                                                                                                    [30;1H~                                                                                                                    [31;1H~                                                                                                                    [32;1H~                                                                                                                    [33;1H~                                                                                                                    [34;1H~                                                                                                                    [35;1H~                                                                                                                    [36;1H~                                                                                                                    [37;1H~                                                                                                                    [38;1H~                                                                                                                    [39;1H~                                                                                                                    [40;1H~                                                                                                                    [41;1H~                                                                                                                    [42;1H~                                                                                                                    [43;1H~                                                                                                                    [44;1H~                                                                                                                    [45;1H~                                                                                                                    [46;1H~                                                                                                                    [47;1H~                                                                                                                    [48;1H~                                                                                                                    [49;1H~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[62;90H^[[1;1H[62;90H  [1;1H[62;90H^[[1;1H[62;90H  [1;1H[?25h[?25l[62;90H:[1;1H[62;1H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"README" 4L, 161C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ make
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello bart lisa
+Hello Bart
+Hello Lisa
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello bart lisa[K[K[K[K[K[K[K[K[K[K 'lisa simpson' 'bart simpson'
+Hello Lisa Simpson�U
+Hello Bart Simpson�U
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ gdb hello
+GNU gdb (Debian 8.2.1-2+b3) 8.2.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from hello...done.
+(gdb) l
+21	    }
+22	    inWord = isalpha(in[i]);
+23	  }
+24	}
+25	
+26	static void
+27	say_hello(const char *name)
+28	{
+29	  printf("Hello %s\n", name);
+30	}
+(gdb) start 'bart simpson' 'lisa simpson'
+Temporary breakpoint 1 at 0x12be: file hello.c, line 35.
+Starting program: /import/linux/home1/rgeary1/projects/i220a/submit/lab2/exercises/2-hello-upcase-args/hello 'bart simpson' 'lisa simpson'
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffe808) at hello.c:35
+35	  if (argc == 1) {
+(gdb) l
+30	}
+31	
+32	int
+33	main(int argc, const char *argv[])
+34	{
+35	  if (argc == 1) {
+36	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
+37	    exit(1);
+38	  }
+39	  else {
+(gdb) p argv[1]
+$1 = 0x7fffffffead4 "bart simpson"
+(gdb) p argv[1][K[K2]
+$2 = 0x7fffffffeae1 "lisa simpson"
+(gdb) l
+40	    for (int i = 1; i < argc; i++) {
+41	      const char *name = argv[i];
+42	      char friendlyName[strlen(name)];
+43	      upcase_words(name, friendlyName);
+44	      say_hello(friendlyName);
+45	    }
+46	  }
+47	  return 0;
+48	}
+(gdb) 
+Line number 49 out of range; hello.c has 48 lines.
+(gdb) 
+Display all 190 possibilities? (y or n)
+(gdb) b char frien[K[K[K[K[K[K[K[K[K[K42
+Breakpoint 2 at 0x55555555531d: file hello.c, line 42.
+(gdb) b 43\
+
+Breakpoint 3 at 0x555555555371: file hello.c, line 43.
+(gdb) b 44
+Breakpoint 4 at 0x555555555384: file hello.c, line 44.
+(gdb) c
+Continuing.
+
+Breakpoint 2, main (argc=3, argv=0x7fffffffe808) at hello.c:42
+42	      char friendlyName[strlen(name)];
+(gdb) p friendlyName 
+value requires 4159130358 bytes, which is more than max-value-size
+(gdb) p strlk[Ken(name)
+$3 = 12
+(gdb) p name
+$4 = 0x7fffffffead4 "bart simpson"
+(gdb) c
+Continuing.
+
+Breakpoint 3, main (argc=3, argv=0x7fffffffe808) at hello.c:43
+43	      upcase_words(name, friendlyName);
+(gdb) l
+38	  }
+39	  else {
+40	    for (int i = 1; i < argc; i++) {
+41	      const char *name = argv[i];
+42	      char friendlyName[strlen(name)];
+43	      upcase_words(name, friendlyName);
+44	      say_hello(friendlyName);
+45	    }
+46	  }
+47	  return 0;
+(gdb) c
+Continuing.
+
+Breakpoint 4, main (argc=3, argv=0x7fffffffe808) at hello.c:44
+44	      say_hello(friendlyName);
+(gdb) l
+39	  else {
+40	    for (int i = 1; i < argc; i++) {
+41	      const char *name = argv[i];
+42	      char friendlyName[strlen(name)];
+43	      upcase_words(name, friendlyName);
+44	      say_hello(friendlyName);
+45	    }
+46	  }
+47	  return 0;
+48	}
+(gdb) b upca`[Kse_words 
+Breakpoint 5 at 0x555555555195: file hello.c, line 13.
+(gdb) b say_hello 
+Breakpoint 6 at 0x55555555528b: file hello.c, line 29.
+(gdb) c
+Continuing.
+
+Breakpoint 6, say_hello (name=0x7fffffffe6b0 "Bart SimpsonUU") at hello.c:29
+29	  printf("Hello %s\n", name);
+(gdb) c
+Continuing.
+Hello Bart SimpsonUU
+
+Breakpoint 2, main (argc=3, argv=0x7fffffffe808) at hello.c:42
+42	      char friendlyName[strlen(name)];
+(gdb) c
+Continuing.
+
+Breakpoint 3, main (argc=3, argv=0x7fffffffe808) at hello.c:43
+43	      upcase_words(name, friendlyName);
+(gdb) c
+Continuing.
+
+Breakpoint 5, upcase_words (in=0x7fffffffeae1 "lisa simpson", out=0x7fffffffe6b0 "Bart Sim)SUUUU") at hello.c:13
+13	  int inWord = 0;
+(gdb) p name
+$5 = '\000' <repeats 32 times>
+(gdb) p friendlyName
+No symbol "friendlyName" in current context.
+(gdb) backtrace
+#0  upcase_words (in=0x7fffffffeae1 "lisa simpson", out=0x7fffffffe6b0 "Bart Sim)SUUUU") at hello.c:13
+#1  0x0000555555555384 in main (argc=3, argv=0x7fffffffe808) at hello.c:43
+(gdb) l
+8	 *  has enough space for the strlen(in) characters of in.
+9	 */
+10	void
+11	upcase_words(const char in[], char out[])
+12	{
+13	  int inWord = 0;
+14	  int n = strlen(in);
+15	  for (int i = 0; i < n; i++) {
+16	    if (!inWord && isalpha(in[i])) {
+17	      out[i] = toupper(in[i]);
+(gdb) 
+18	    }
+19	    else {
+20	      out[i] = in[i];
+21	    }
+22	    inWord = isalpha(in[i]);
+23	  }
+24	}
+25	
+26	static void
+27	say_hello(const char *name)
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 1180641] will be killed.
+
+Quit anyway? (y or n) y
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ vim hello.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"hello.c" 48L, 962C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<ctype.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+[35m#include [m[31m<string.h>[m
+
+[34m/** Upcase the initial letter of each word from in, copying the
+ *  results into out.  The caller is responsible to ensure that out
+ *  has enough space for the strlen(in) characters of in.
+ */[m
+[32mvoid[m
+upcase_words([32mconst[m [32mchar[m in[], [32mchar[m out[])
+{
+  [32mint[m inWord = [31m0[m;
+  [32mint[m n = strlen(in);
+  [33mfor[m ([32mint[m i = [31m0[m; i < n; i++) {
+    [33mif[m (!inWord && isalpha(in[i])) {[17;7Hout[i] = toupper(in[i]);
+    }
+    [33melse[m {[20;7Hout[i] = in[i];
+    }
+    inWord = isalpha(in[i]);
+  }
+}
+
+[32mstatic[m [32mvoid[m
+say_hello([32mconst[m [32mchar[m *name)
+{
+  printf([31m"Hello [m[35m%s\n[m[31m"[m, name);
+}
+
+[32mint[m
+main([32mint[m argc, [32mconst[m [32mchar[m *argv[])
+{
+  [33mif[m (argc == [31m1[m) {
+    fprintf([31mstderr[m, [31m"usage: [m[35m%s[m[31m NAME...[m[35m\n[m[31m"[m, argv[[31m0[m]);
+    exit([31m1[m);
+  }
+  [33melse[m {
+    [33mfor[m ([32mint[m i = [31m1[m; i < argc; i++) {[41;7H[32mconst[m [32mchar[m *name = argv[i];[42;7H[32mchar[m friendlyName[strlen(name)];[43;7Hupcase_words(name, friendlyName);[44;7Hsay_hello(friendlyName);
+    }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H1,1[11CAll[1;1H[?25h[?1000l[?1002h[?25l[42;24H[46m[[12C][m[62;100H42,37[42;37H[?25h[?25l[62;90Hi[42;37H[62;90H [42;37H[62;1H[1m-- INSERT --[m[62;13H[K[62;100H42,37[9CAll[42;37H[?25h[?25l[46m [m]; [46m][m[62;104H8[42;38H[?25h[?25l[46m+[m];+[46m][m[62;104H9[42;39H[?25h[?25l[46m [m]; [46m][m[62;103H40[42;40H[?25h[?25l[31m[46m1[m];[31m1[m[46m][m[62;104H1[42;41H[?25h[62;1H[K[42;40H[?25l[62;90H^[[42;40H[62;90H  [42;41H[42;24H[[16C][62;100H42,40[9CAll[42;40H[?25h[?25l[62;90H:[42;40H[62;90H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"hello.c" 48L, 966C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ make
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'bart simpson' ' [Klisa simpson'
+Hello Bart SimpsonPV
+Hello Lisa SimpsonPV
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'bart simpson' 'lisa simpson'make[Kvim hello.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"hello.c" 48L, 966C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<ctype.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+[35m#include [m[31m<string.h>[m
+
+[34m/** Upcase the initial letter of each word from in, copying the
+ *  results into out.  The caller is responsible to ensure that out
+ *  has enough space for the strlen(in) characters of in.
+ */[m
+[32mvoid[m
+upcase_words([32mconst[m [32mchar[m in[], [32mchar[m out[])
+{
+  [32mint[m inWord = [31m0[m;
+  [32mint[m n = strlen(in);
+  [33mfor[m ([32mint[m i = [31m0[m; i < n; i++) {
+    [33mif[m (!inWord && isalpha(in[i])) {[17;7Hout[i] = toupper(in[i]);
+    }
+    [33melse[m {[20;7Hout[i] = in[i];
+    }
+    inWord = isalpha(in[i]);
+  }
+}
+
+[32mstatic[m [32mvoid[m
+say_hello([32mconst[m [32mchar[m *name)
+{
+  printf([31m"Hello [m[35m%s\n[m[31m"[m, name);
+}
+
+[32mint[m
+main([32mint[m argc, [32mconst[m [32mchar[m *argv[])
+{
+  [33mif[m (argc == [31m1[m) {
+    fprintf([31mstderr[m, [31m"usage: [m[35m%s[m[31m NAME...[m[35m\n[m[31m"[m, argv[[31m0[m]);
+    exit([31m1[m);
+  }
+  [33melse[m {
+    [33mfor[m ([32mint[m i = [31m1[m; i < argc; i++) {[41;7H[32mconst[m [32mchar[m *name = argv[i];[42;7H[32mchar[m friendlyName[strlen(name) + [31m1[m];[43;7Hupcase_words(name, friendlyName);[44;7Hsay_hello(friendlyName);
+    }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H42,40[9CAll[42;40H[?25h[?1000l[?1002h[?25l[62;90Hi[42;40H[62;90H [42;40H[62;1H[1m-- INSERT --[m[62;13H[K[62;100H42,40[9CAll[42;40H[?25h[?25l[42;24H[46m[[16C][m[62;104H1[42;41H[?25h[?25l][46m;[m[42;42H[K[42;40H[46m][m;[62;104H0[42;40H[?25h[?25l[31m[46m2[m];[31m2[m[46m][m[62;104H1[42;41H[?25h[62;1H[K[42;40H[?25l[62;90H^[[42;40H[62;90H  [42;41H[42;24H[[16C][62;100H42,40[9CAll[42;40H[?25h[?25l[62;90H:[42;40H[62;90H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"hello.c" 48L, 966C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ vim hello.c./hello 'bart simpson' 'lisa simpson'make[K\
+> 
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ make\vim hello.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"hello.c" 48L, 966C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<ctype.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+[35m#include [m[31m<string.h>[m
+
+[34m/** Upcase the initial letter of each word from in, copying the
+ *  results into out.  The caller is responsible to ensure that out
+ *  has enough space for the strlen(in) characters of in.
+ */[m
+[32mvoid[m
+upcase_words([32mconst[m [32mchar[m in[], [32mchar[m out[])
+{
+  [32mint[m inWord = [31m0[m;
+  [32mint[m n = strlen(in);
+  [33mfor[m ([32mint[m i = [31m0[m; i < n; i++) {
+    [33mif[m (!inWord && isalpha(in[i])) {[17;7Hout[i] = toupper(in[i]);
+    }
+    [33melse[m {[20;7Hout[i] = in[i];
+    }
+    inWord = isalpha(in[i]);
+  }
+}
+
+[32mstatic[m [32mvoid[m
+say_hello([32mconst[m [32mchar[m *name)
+{
+  printf([31m"Hello [m[35m%s\n[m[31m"[m, name);
+}
+
+[32mint[m
+main([32mint[m argc, [32mconst[m [32mchar[m *argv[])
+{
+  [33mif[m (argc == [31m1[m) {
+    fprintf([31mstderr[m, [31m"usage: [m[35m%s[m[31m NAME...[m[35m\n[m[31m"[m, argv[[31m0[m]);
+    exit([31m1[m);
+  }
+  [33melse[m {
+    [33mfor[m ([32mint[m i = [31m1[m; i < argc; i++) {[41;7H[32mconst[m [32mchar[m *name = argv[i];[42;7H[32mchar[m friendlyName[strlen(name) + [31m2[m];[43;7Hupcase_words(name, friendlyName);[44;7Hsay_hello(friendlyName);
+    }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H42,40[9CAll[42;40H[?25h[?1000l[?1002h[?25l[62;90H^[[42;40H[62;90H  [42;40H[62;90H^[[42;40H[62;90H  [42;40H[?25h[?25l[62;90H:[42;40H[62;1H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"hello.c" 48L, 966C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ vim hello.c[6Pmake\vim hello.c./hello 'bart simpson' 'lisa simpson'
+Hello Bart SimpsonrU
+Hello Lisa SimpsonrU
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'bart simpson' 'lisa simpson'vim hello.c[K[6Pmake\vim hello.c
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;62r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[62;1H"hello.c" 48L, 966C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<ctype.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<stdlib.h>[m
+[35m#include [m[31m<string.h>[m
+
+[34m/** Upcase the initial letter of each word from in, copying the
+ *  results into out.  The caller is responsible to ensure that out
+ *  has enough space for the strlen(in) characters of in.
+ */[m
+[32mvoid[m
+upcase_words([32mconst[m [32mchar[m in[], [32mchar[m out[])
+{
+  [32mint[m inWord = [31m0[m;
+  [32mint[m n = strlen(in);
+  [33mfor[m ([32mint[m i = [31m0[m; i < n; i++) {
+    [33mif[m (!inWord && isalpha(in[i])) {[17;7Hout[i] = toupper(in[i]);
+    }
+    [33melse[m {[20;7Hout[i] = in[i];
+    }
+    inWord = isalpha(in[i]);
+  }
+}
+
+[32mstatic[m [32mvoid[m
+say_hello([32mconst[m [32mchar[m *name)
+{
+  printf([31m"Hello [m[35m%s\n[m[31m"[m, name);
+}
+
+[32mint[m
+main([32mint[m argc, [32mconst[m [32mchar[m *argv[])
+{
+  [33mif[m (argc == [31m1[m) {
+    fprintf([31mstderr[m, [31m"usage: [m[35m%s[m[31m NAME...[m[35m\n[m[31m"[m, argv[[31m0[m]);
+    exit([31m1[m);
+  }
+  [33melse[m {
+    [33mfor[m ([32mint[m i = [31m1[m; i < argc; i++) {[41;7H[32mconst[m [32mchar[m *name = argv[i];[42;7H[32mchar[m friendlyName[strlen(name) + [31m2[m];[43;7Hupcase_words(name, friendlyName);[44;7Hsay_hello(friendlyName);
+    }
+  }
+  [33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                    [50;1H~                                                                                                                    [51;1H~                                                                                                                    [52;1H~                                                                                                                    [53;1H~                                                                                                                    [54;1H~                                                                                                                    [55;1H~                                                                                                                    [56;1H~                                                                                                                    [57;1H~                                                                                                                    [58;1H~                                                                                                                    [59;1H~                                                                                                                    [60;1H~                                                                                                                    [61;1H~                                                                                                                    [m[62;100H42,40[9CAll[42;40H[?25h[?1000l[?1002h[?25l[14;17H[46m([min[46m)[m[62;100H14,2[14;20H[?25h[?25l(in)[62;104H1[14;21H[?25h[?25l[62;90HI[14;21H[62;90H [14;3H[62;1H[1m-- INSERT --[m[62;13H[K[62;100H14,3[10CAll[14;3H[?25h[?25l[14C[46m([min[46m)[m[62;103H21[14;21H[?25h[?25l ;(in)[62;104H2[14;22H[?25h[?25l+;[62;104H3[14;23H[?25h[?25l ;[62;104H4[14;24H[?25h[?25l[31m2[m;[62;104H5[14;25H[?25h[62;1H[K[14;24H[?25l[62;90H^[[14;24H[62;90H  [14;25H[62;100H14,24[9CAll[14;24H[?25h[?25l[62;90H:[14;24H[62;90H[K[62;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1002l[?2004l"hello.c" 48L, 970C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ vim hello.c./hello 'bart simpson' 'lisa simpson'vim hello.c[K[6Pmake\
+> make\
+> 
+bash: makemake: command not found
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ makemake\[K[K[K[K[K
+cc -g -Wall -std=c11    hello.c   -o hello
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ makemake\vim hello.c./hello 'bart simpson' 'lisa simpson'
+Hello Bart Simpson
+Hello Lisa Simpson
+rgeary1@remote07:~/i220a/submit/lab2/exercises/2-hello-upcase-args$ cd ~/i220a/[K[K[K[K[K[K[K[K[K[K[Kcd  ../..
+rgeary1@remote07:~/i220a/submit/lab2$ exit
+
+Script done on 2020-09-09 16:33:05-04:00 [COMMAND_EXIT_CODE="0"]
