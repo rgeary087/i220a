@@ -4,7 +4,35 @@
 #include <ctype.h>
 #include <limits.h>
 #include <stdio.h>
+/** Returns the digit of a bcd at a specified index
+ *
+ *(0x12, 1) -> 1
+ */
+Bcd
+get_bcd_digit(Bcd value, unsigned index){
+	/*value <<= (sizeof(value)-(index*4)-4);
+	value>>=(sizeof(value)-4); // gets the 4 wanted bits that make up a Bcd digit to the 4 right-most bits
+	return value;
+	*/
+	return (value >> (4*index)) & (Bcd)(0xf);
+}
 
+Bcd
+set_bcd_digit(Bcd value, Bcd set, unsigned index){
+	/*for(int i = 0; i < 4; i++){
+		if(set%2 == 1){
+			*value &= (1<<((index*4)+i)); 	
+		}
+		else{
+			*value &= (~(1<<((index*4)+i)));
+		}
+		set>>=1;
+	}*/
+	Bcd mask = (Bcd)(0xf);
+	value &= ~(mask<<(index*4));
+	value |= (set<<(index*4));
+	return value;	
+}
 /** Return BCD encoding of binary (which has normal binary representation).
  *
  *  Examples: binary_to_bcd(0xc) => 0x12;
@@ -16,8 +44,14 @@
 Bcd
 binary_to_bcd(Binary value, BcdError *error)
 {
-  //@TODO
-  return 0;
+  Bcd ret = 0;
+  int i = 0;
+  while(value > 0){
+    ret = set_bcd_digit(ret, value%10, i);
+    value/=10;
+    i++;
+  }  
+  return ret;
 }
 
 /** Return binary encoding of BCD value bcd.
@@ -32,8 +66,14 @@ binary_to_bcd(Binary value, BcdError *error)
 Binary
 bcd_to_binary(Bcd bcd, BcdError *error)
 {
-  //@TODO
-  return 0;
+  Binary ret = 0;
+  int i = 1;
+  while(bcd > 0){
+    ret	+= get_bcd_digit(bcd, 0)*(i);
+    i*=10;
+    bcd >>= 4;
+  }
+  return ret;
 }
 
 /** Return BCD encoding of decimal number corresponding to string s.
