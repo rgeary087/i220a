@@ -50,6 +50,9 @@ binary_to_bcd(Binary value, BcdError *error)
     ret = set_bcd_digit(ret, value%10, i);
     value/=10;
     i++;
+  }
+  if(i > MAX_BCD_DIGITS && error != NULL){
+    *error = OVERFLOW_ERR;
   }  
   return ret;
 }
@@ -67,9 +70,11 @@ Binary
 bcd_to_binary(Bcd bcd, BcdError *error)
 {
   Binary ret = 0;
-  int i = 1;
+  Bcd i = 1;
   while(bcd > 0){
-    ret	+= get_bcd_digit(bcd, 0)*(i);
+    Bcd temp = get_bcd_digit(bcd, 0);
+    if(error != NULL && temp > 9){ *error = BAD_VALUE_ERR; break;}
+    ret	+= temp*(i);
     i*=10;
     bcd >>= 4;
   }
@@ -87,8 +92,20 @@ bcd_to_binary(Bcd bcd, BcdError *error)
 Bcd
 str_to_bcd(const char *s, const char **p, BcdError *error)
 {
-  //@TODO
-  return 0;
+  Binary ret = 0;
+  *p = s;
+  unsigned i = 0;
+  for(;s[i] != '\0' ; i++){	  
+      if(s[i] >= '0' && s[i] <= '9'){   
+	ret *= 10;
+        ret += s[i] - '0';
+	++*p;
+      }else{
+	break;
+      }
+  }
+  if(i > MAX_BCD_DIGITS && error != NULL){ *error = OVERFLOW_ERR;}
+  return binary_to_bcd(ret, error);
 }
 
 /** Convert bcd to a NUL-terminated string in buf[] without any
@@ -103,8 +120,15 @@ str_to_bcd(const char *s, const char **p, BcdError *error)
 int
 bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 {
-  //@TODO
-  return 0;
+  for(int i = 0; i < bufSize; i++){
+    if(get_bcd_digit(bcd, i) > 9 && error != NULL){*error = BAD_VALUE_ERR;}
+  }
+  if(bufSize < BCD_BUF_SIZE && error != NULL){
+    *error = OVERFLOW_ERR;
+  }
+    
+  	
+  return snprintf(buf, bufSize, "%" BCD_FORMAT_MODIFIER "x", bcd);
 }
 
 /** Return the BCD representation of the sum of BCD int's x and y.
@@ -116,8 +140,17 @@ bcd_to_str(Bcd bcd, char buf[], size_t bufSize, BcdError *error)
 Bcd
 bcd_add(Bcd x, Bcd y, BcdError *error)
 {
-  //@TODO
-  return 0;
+  unsigned carry = 0;
+  Bcd ret = 0;
+  for(unsigned i = 0; i < MAX_BCD_DIGITS; i++){
+    if(error != NULL && (get_bcd_digit(x, i) > 9 || get_bcd_digit(y,i) > 9)){ *error = BAD_VALUE_ERR;}
+    Bcd temp = get_bcd_digit(x, i) + get_bcd_digit(y,i) + carry;
+    ret = (temp >= 10 ? set_bcd_digit(ret, temp - 10 , i):set_bcd_digit(ret, temp, i));
+    if(temp >= 10){carry = 1;}   
+    else{carry = 0;}
+  }
+  if(carry > 0 && *error == 0){*error = OVERFLOW_ERR;}
+  return ret;
 }
 
 /** Return the BCD representation of the product of BCD int's x and y.
@@ -126,9 +159,31 @@ bcd_add(Bcd x, Bcd y, BcdError *error)
  * contains a BCD digit which is greater than 9, OVERFLOW_ERR on
  * overflow, otherwise *error is unchanged.
  */
+
+static Bcd
+bcd_multiply_digit(Bcd multi, unsigned bcdDig, BcdError *error){
+  Bcd ret = 0;
+  for(int i = i; i < bcdDig; i++){
+    ret = bcd_add(ret, multi, error);
+  }
+  return ret;
+}
 Bcd
 bcd_multiply(Bcd x, Bcd y, BcdError *error)
 {
-  //@TODO
-  return 0;
+  int counter = 0;
+  Bcd ret = 0;
+  Bcd ex = 1;
+  for(int i = 0; i < MAX_BCD_DIGITS; i++){
+    if(*error == 0 && (get_bcd_digit(x,i) > 9 || get_bcd_digit(y,i) > 9)){ *error = BAD_VALUE_ERR;} 
+  }
+  Bcd temp = y;
+  while(counter < MAX_BCD_DIGITS){
+    int val = get_bcd_digit(temp, counter);
+    Bcd mult = bcd_multiply_digit(x, val, error);
+    ret = bcd_add(ret, mult*ex, error);
+    ex*=10;
+    counter++;
+  }
+  return ret;
 }
