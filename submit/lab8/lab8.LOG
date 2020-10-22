@@ -1,0 +1,698 @@
+Script started on 2020-10-22 12:01:09-04:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="134" LINES="34"]
+bash: /home/umrigar/cs240/bin/student.rc: No such file or directory
+rgeary1@remote00:~/i220a/submit/lab8$ 
+rgeary1@remote00:~/i220a/submit/lab8$ cd 1[K[K[K[Kcd exercises/1-quote-files/
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls -l
+total 0
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '**'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '1$2'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 "'12"
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '1"2'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 'a$b'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '\\ab'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 'a"b'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 "a'b"
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57  -l
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo \\
+\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo \;[K'
+'
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo \'[K*
+*
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo \*[C[K$HOME\"\\
+$HOME"\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ '\'
+bash: \: command not found
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ '\'e'\'c'\'h'\'o '\'
+\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo '\'\'
+\\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo '\\'[1P'[1P'*'$'~'
+*$~
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo '*$~'~'~'[1P'[1P'[1P'[1P'[1P'\'"'\'\'
+\"\\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo '\"\\'[1P\"\\'"\"\\'[C[C[C[C[C[K"
+"\
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo "\"\\"[1P"[1P"[K[1P"[K[C"$"H"O"M"E"
+/home/rgeary1
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ [Krgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ [Krgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo \
+> abc\
+> 123
+abc123
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls *$*
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '**'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '1$2'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 "'12"
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '1"2'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 'a$b'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '\\ab'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 'a"b'
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 "a'b"
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls *$*\$*
+'1$2'  'a$b'
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls *\'*
+"'12"  "a'b"
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ \\*l\\*s\\* \\*
+'\\ab'
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls
+'**'  '1$2'  "'12"  '1"2'  'a$b'  '\\ab'  'a"b'  "a'b"	 -l
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls [][][K[K[K[K??
+-rw-r----- 1 rgeary1 rgeary1 0 Oct 22 11:57 '**'
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ll[Ks -- ??
+'**'   -l
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ env
+SHELL=/bin/bash
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+KRB5CCNAME=FILE:/tmp/krb5cc_14700_4bJcnzGIiB
+PWD=/home/rgeary1/i220a/submit/lab8/exercises/1-quote-files
+LOGNAME=rgeary1
+XDG_SESSION_TYPE=tty
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+HOME=/home/rgeary1
+LANG=en_US.UTF-8
+_VIRTUALENVWRAPPER_API= mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv
+SSH_CONNECTION=149.125.44.171 60259 128.226.114.200 22
+XDG_SESSION_CLASS=user
+TERM=xterm
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+USER=rgeary1
+SHLVL=2
+XDG_SESSION_ID=514835
+XDG_RUNTIME_DIR=/run/user/14700
+SSH_CLIENT=149.125.44.171 60259 22
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+MAIL=/var/mail/rgeary1
+SSH_TTY=/dev/pts/0
+OLDPWD=/home/rgeary1/i220a/submit/lab8
+_=/usr/bin/env
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ech [Ko $HOME
+/home/rgeary1
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo $HOME[K[K[K[KPATH
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo $xxx
+
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ xxx [K=123
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ xxx=123echo $xxx
+123
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ env | grep xxx
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ export xxx
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ env | grepxx
+bash: grepxx: command not found
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ env | grepxx xx xx
+xxx=123
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ecport[K[K[K[K[Kxport xx=456
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ export xx=456nv | grep  xx
+xxx=123
+xx=456
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ 
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ p=HOME
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ $p
+bash: HOME: command not found
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ $pp=HOME$HOME
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ p=$HOME$p[K
+bash: /home/rgeary1: Is a directory
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ $pp=$HOME$p[Kp=$HOME[K[K[K[KPATH
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ p=$PATH$p[K
+bash: /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin: No such file or directory
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo $p
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo=
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo= $p$p[Kecho $p[2P=[KPATH=
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo ${A[K[KPATH
+
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls
+bash: ls: No such file or directory
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ PATH=$p
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ PATH=$pls[KPATH=$pls[K
+'**'  '1$2'  "'12"  '1"2'  'a$b'  '\\ab'  'a"b'  "a'b"	 -l
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls ; wc *
+'**'  '1$2'  "'12"  '1"2'  'a$b'  '\\ab'  'a"b'  "a'b"	 -l
+0 **
+0 1$2
+0 '12
+0 1"2
+0 a$b
+0 \\ab
+0 a"b
+0 a'b
+0 total
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ fiu[Knd -L ~/cs220 -name '*.C'[1P'c'\'[1P'
+/home/rgeary1/cs220/exercises/questions/src/x86/fns-asm.c
+/home/rgeary1/cs220/labs/lab1/exercises/1-hello/hello.c
+/home/rgeary1/cs220/labs/lab1/exercises/3-multifile/main.c
+/home/rgeary1/cs220/labs/lab1/exercises/3-multifile/quadr.c
+/home/rgeary1/cs220/labs/lab1/exercises/4-from-scratch/key-value.c
+/home/rgeary1/cs220/labs/lab1/exercises/4-from-scratch/main.c
+/home/rgeary1/cs220/labs/lab1/exercises/4-from-scratch/process-file.c
+/home/rgeary1/cs220/labs/lab1/exercises/5-auto-dependencies/main.c
+/home/rgeary1/cs220/labs/lab1/exercises/5-auto-dependencies/quadr.c
+/home/rgeary1/cs220/labs/lab2/exercises/1-hello-args/hello.c
+/home/rgeary1/cs220/labs/lab2/exercises/2-hello-upcase-args/hello.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/1-pointers/pointers.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/2-in-pointers/in-pointers.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/3-bad-types/bad-types.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/4-cast-types/cast-types.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/5-void-pointers/void-pointers.c
+/home/rgeary1/cs220/labs/4-pointers/exercises/6-in-voids/in-voids.c
+/home/rgeary1/cs220/labs/lab4/exercises/1-pointers/pointers.c
+/home/rgeary1/cs220/labs/lab4/exercises/2-in-pointers/in-pointers.c
+/home/rgeary1/cs220/labs/lab4/exercises/3-bad-types/bad-types.c
+/home/rgeary1/cs220/labs/lab4/exercises/4-cast-types/cast-types.c
+/home/rgeary1/cs220/labs/lab4/exercises/5-void-pointers/void-pointers.c
+/home/rgeary1/cs220/labs/lab4/exercises/6-in-voids/in-voids.c
+/home/rgeary1/cs220/labs/5-arith/exercises/1-uints/uints.c
+/home/rgeary1/cs220/labs/5-arith/exercises/2-ints/ints.c
+/home/rgeary1/cs220/labs/5-arith/exercises/3-identify/identify.c
+/home/rgeary1/cs220/labs/5-arith/exercises/4-negeq/negeq.c
+/home/rgeary1/cs220/labs/5-arith/exercises/6-inexact/0.1.c
+/home/rgeary1/cs220/labs/5-arith/exercises/7-nan/nan.c
+/home/rgeary1/cs220/labs/5-arith/exercises/8-ulp/ulp.c
+/home/rgeary1/cs220/labs/5-arith/exercises/9-loop/loop.c
+/home/rgeary1/cs220/labs/lab5/exercises/1-uints/uints.c
+/home/rgeary1/cs220/labs/lab5/exercises/2-ints/ints.c
+/home/rgeary1/cs220/labs/lab5/exercises/3-identify/identify.c
+/home/rgeary1/cs220/labs/lab5/exercises/4-negeq/negeq.c
+/home/rgeary1/cs220/labs/lab5/exercises/6-inexact/0.1.c
+/home/rgeary1/cs220/labs/lab5/exercises/7-nan/nan.c
+/home/rgeary1/cs220/labs/lab5/exercises/8-ulp/ulp.c
+/home/rgeary1/cs220/labs/lab5/exercises/9-loop/loop.c
+/home/rgeary1/cs220/labs/6-linking/exercises/1-log10/log10.c
+/home/rgeary1/cs220/labs/6-linking/exercises/2-multiple-symbols/def1.c
+/home/rgeary1/cs220/labs/6-linking/exercises/2-multiple-symbols/def2.c
+/home/rgeary1/cs220/labs/6-linking/exercises/2-multiple-symbols/main.c
+/home/rgeary1/cs220/labs/6-linking/exercises/3-multiple-defs/f.c
+/home/rgeary1/cs220/labs/6-linking/exercises/3-multiple-defs/main.c
+/home/rgeary1/cs220/labs/6-linking/exercises/4-static-dynamic/log10.c
+/home/rgeary1/cs220/labs/6-linking/exercises/5-libvec/addvec.c
+/home/rgeary1/cs220/labs/6-linking/exercises/5-libvec/multvec.c
+/home/rgeary1/cs220/labs/6-linking/exercises/5-libvec/testvec.c
+/home/rgeary1/cs220/labs/6-linking/exercises/7-libgeom/circ.c
+/home/rgeary1/cs220/labs/6-linking/exercises/7-libgeom/rect.c
+/home/rgeary1/cs220/labs/6-linking/exercises/7-libgeom/testgeom.c
+/home/rgeary1/cs220/labs/lab6/exercises/1-log10/log10.c
+/home/rgeary1/cs220/labs/lab6/exercises/2-multiple-symbols/def1.c
+/home/rgeary1/cs220/labs/lab6/exercises/2-multiple-symbols/def2.c
+/home/rgeary1/cs220/labs/lab6/exercises/2-multiple-symbols/main.c
+/home/rgeary1/cs220/labs/lab6/exercises/3-multiple-defs/f.c
+/home/rgeary1/cs220/labs/lab6/exercises/3-multiple-defs/main.c
+/home/rgeary1/cs220/labs/lab6/exercises/4-static-dynamic/log10.c
+/home/rgeary1/cs220/labs/lab6/exercises/5-libvec/addvec.c
+/home/rgeary1/cs220/labs/lab6/exercises/5-libvec/multvec.c
+/home/rgeary1/cs220/labs/lab6/exercises/5-libvec/testvec.c
+/home/rgeary1/cs220/labs/lab6/exercises/7-libgeom/circ.c
+/home/rgeary1/cs220/labs/lab6/exercises/7-libgeom/rect.c
+/home/rgeary1/cs220/labs/lab6/exercises/7-libgeom/testgeom.c
+/home/rgeary1/cs220/labs/7-assembly-language/exercises/hello.c
+/home/rgeary1/cs220/labs/lab7/exercises/hello.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-08-28/hello-mem.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-08-28/hello.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-02/expr-vs-statement.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-02/fragments.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-02/sizeof.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-02/ternary.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-04/arrays.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-04/chars.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-04/ints.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-07/arrays.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-07/bases.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-07/sum.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-09/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-16/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-18/decl-defn.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-18/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-18/multi-array.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-18/ptr-array.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-21/ptr-ret.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-21/quadr.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-23/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-09-25/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-10-12/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-10-14/doodles.c
+/home/rgeary1/cs220/misc/doodles/220a/2020-10-21/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-08-28/hello.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-02/assign.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-02/bits.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-02/expr.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-02/fragments.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-04/arrays.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-04/chars.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-04/ints.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-07/arrays.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-07/gsum.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-07/sum.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-09/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-16/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-18/arr-ptr.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-18/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-18/strings.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-21/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-21/even-odd.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-21/quadr.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-23/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-25/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-09-30/doodle.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-10-12/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-10-14/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-10-19/doodles.c
+/home/rgeary1/cs220/misc/doodles/220b/2020-10-21/doodles.c
+/home/rgeary1/cs220/projects/prj1/extras/flip-bits/flip-bits.c
+/home/rgeary1/cs220/projects/prj1/prj1-sol/hamming.c
+/home/rgeary1/cs220/projects/prj1/prj1-sol/main.c
+/home/rgeary1/cs220/projects/prj2/bcd-test.c
+/home/rgeary1/cs220/projects/prj2/prj2-sol/main.c
+/home/rgeary1/cs220/projects/prj2/prj2-sol/bcd-test.c
+/home/rgeary1/cs220/projects/prj2/prj2-sol/bcd.c
+/home/rgeary1/cs220/projects/prj1-sol/hamming.c
+/home/rgeary1/cs220/projects/prj1-sol/main.c
+/home/rgeary1/cs220/projects/prj2-sol/bcd-test.c
+/home/rgeary1/cs220/projects/prj2-sol/bcd.c
+/home/rgeary1/cs220/projects/prj2-sol/main.c
+/home/rgeary1/cs220/slides/intro/code/hello.c
+/home/rgeary1/cs220/slides/c-intro/code/bases.c
+/home/rgeary1/cs220/slides/c-intro/code/count-1s-1.c
+/home/rgeary1/cs220/slides/c-intro/code/count-1s-2.c
+/home/rgeary1/cs220/slides/c-intro/code/endian.c
+/home/rgeary1/cs220/slides/c-intro/code/integer-sizes.c
+/home/rgeary1/cs220/slides/c-intro/code/kilo-powers.c
+/home/rgeary1/cs220/slides/c-intro/code/ptr-sum.c
+/home/rgeary1/cs220/slides/c-intro/code/robust-sum.c
+/home/rgeary1/cs220/slides/c-intro/code/sum-args.c
+/home/rgeary1/cs220/slides/c-intro/code/wc.c
+/home/rgeary1/cs220/slides/c-intro/code/sum.c
+/home/rgeary1/cs220/slides/c-intro/code/out-bits.c
+/home/rgeary1/cs220/slides/x86/code/abs-diff.c
+/home/rgeary1/cs220/slides/x86/code/acc-fact.c
+/home/rgeary1/cs220/slides/x86/code/arith.c
+/home/rgeary1/cs220/slides/x86/code/array-access.c
+/home/rgeary1/cs220/slides/x86/code/cmp-sets.c
+/home/rgeary1/cs220/slides/x86/code/conditional-move.c
+/home/rgeary1/cs220/slides/x86/code/div-mod.c
+/home/rgeary1/cs220/slides/x86/code/dynamic-array.c
+/home/rgeary1/cs220/slides/x86/code/fact-do-while.c
+/home/rgeary1/cs220/slides/x86/code/fact-while.c
+/home/rgeary1/cs220/slides/x86/code/find.c
+/home/rgeary1/cs220/slides/x86/code/indirect-goto.c
+/home/rgeary1/cs220/slides/x86/code/move.c
+/home/rgeary1/cs220/slides/x86/code/mstore/main.c
+/home/rgeary1/cs220/slides/x86/code/mstore/mstore.c
+/home/rgeary1/cs220/slides/x86/code/point3.c
+/home/rgeary1/cs220/slides/x86/code/read-point.c
+/home/rgeary1/cs220/slides/x86/code/rec-fact.c
+/home/rgeary1/cs220/slides/x86/code/scale.c
+/home/rgeary1/cs220/slides/x86/code/stack-frame.c
+/home/rgeary1/cs220/slides/x86/code/structs.c
+/home/rgeary1/cs220/slides/x86/code/sum-dist-origin-s.c
+/home/rgeary1/cs220/slides/x86/code/sum-dist-origin.c
+/home/rgeary1/cs220/slides/x86/code/sum.c
+/home/rgeary1/cs220/slides/x86/code/switch.c
+/home/rgeary1/cs220/slides/x86/code/vframe.c
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ find -L ~/cs220 -name '*.c' | wc -l
+169
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ find -L ~/cs220 -name '*.c' | wc -l[1P[1P[1P
+0
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ find ~/cs220 -name '*.c' | wc -l[K[K[K[K[K[K[K[K
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ find ~/cs220 -name '*.c'[C[C[1P[1P[1P[1P[1P[1P[1P[1@/[C[1@ [1P[C[C[C[C[C[C[C[C[C[C[C[C 2>/dev/null >c-files.lst &
+[1] 3772591
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ jobs
+[1]+  Running                 find / -name '*.c' 2> /dev/null > c-files.lst &
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ kill %1
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ jobs
+[1]+  Terminated              find / -name '*.c' 2> /dev/null > c-files.lst
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ ls
+'**'  '1$2'  "'12"  '1"2'  'a$b'  '\\ab'  'a"b'  "a'b"	 c-files.lst   -l
+rgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ vim c-files.lst 
+[?1000h[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;71r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[71;1H"c-files.lst" [noeol] 158L, 8192C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/0[31m9[m-0[31m8[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-0[31m6[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m20[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36msum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m10[m-[31m27[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36msum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m1[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36msum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-0[31m3[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36msum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mlab02[m/[36mMinimum[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mlab02[m/[36mTotal[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36mMultTables[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120lab[m/[36msum100[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m11[m-[31m24[m/[36mHello[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m12[m-0[31m8[m/[36mcs120[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m12[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mAverage[m[33m.c[m
+/[36mbackup[m/[36mrgeary1[m/[36mlinux[m/[31m2019[m/[31m12[m-0[31m8[m/[36mcs120lab[m/[36mlab02[m/[36mMaximum[m[33m.c[m[71;117H1,1[11CTop[1;1H[?25h[?1000l[?1006h[?1002h[?1006l[?1002l[?1006h[?1002h[27m[23m[29m[m[H[2J[?25l[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H1,1[11CTop"c-files.lst" [noeol] 158L, 8192C[1;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;1H[K[71;117H9,1[12C3%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m[71;117H[K[71;117H12,1[11C6%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H15,1[10C10%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m[71;117H[K[71;117H18,1[10C13%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H21,1[10C17%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H24,1[10C20%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H27,1[10C23%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H30,1[10C27%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H33,1[10C30%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H36,1[10C34%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m[71;117H[K[71;117H39,1[10C37%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m[71;117H[K[71;117H42,1[10C40%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H45,1[10C44%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m[71;117H[K[71;117H48,1[10C47%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m[71;117H[K[71;117H51,1[10C51%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120[m[1m[33m.c[m[71;117H[K[71;117H54,1[10C54%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H57,1[10C57%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H60,1[10C61%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H63,1[10C64%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H66,1[10C68%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H69,1[10C71%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m[71;117H[K[71;117H72,1[10C75%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m3[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H75,1[10C78%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H78,1[10C81%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H81,1[10C85%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mprojects[m/[1m[36mi240a[m/[1m[36msubmit[m/[1m[36mlab6[m/[1m[36mdir[m/[1m[36mt2[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mprojects[m/[1m[36mi240a[m/[1m[36msubmit[m/[1m[36mlab6[m/[1m[36mt1[m[1m[33m.c[m[71;117H[K[71;117H84,1[10C88%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mprojects[m/[1m[36mi240a[m/[1m[36msubmit[m/[1m[36mlab6[m/[1m[36mv[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mprojects[m/[1m[36mi240a[m/[1m[36msubmit[m/[1m[36mlab6[m/[1m[36mx[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m4[m-0[1m[35m5[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H87,1[10C92%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H90,1[10C95%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m10[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H93,1[10C98%[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m5[m-[1m[35m1[m
+[1m[34m~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H96,1[10CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H99,1[10CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H102,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H105,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H108,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H111,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H114,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H117,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H120,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H123,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H126,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H129,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3M[1;71r[68;1H[1m[34m~                                                                                                                                     [69;1H~                                                                                                                                     [70;1H~                                                                                                                                     [m[71;117H[K[71;117H132,1[9CBot[6;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[9;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[12;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-[1m[35m23[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[15;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[18;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[21;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[24;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m2[m-0[1m[35m2[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[27;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[30;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[33;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[36;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[39;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H132,1[9CBot[42;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C98%[45;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C95%[48;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C92%[51;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C88%[54;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C85%[57;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C81%[60;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m[71;117H[K[71;117H132,1[9C78%[63;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m[71;117H[K[71;117H131,1[9C75%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120[m[1m[33m.c[m[71;117H[K[71;117H128,1[9C71%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H125,1[9C68%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-[1m[35m24[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H122,1[9C64%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H119,1[9C61%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H116,1[9C57%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H113,1[9C54%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m3[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H110,1[9C51%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H107,1[9C47%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H104,1[9C44%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m11[m-0[1m[35m1[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H101,1[9C40%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H98,1[10C37%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H95,1[10C34%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m27[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m[71;117H[K[71;117H92,1[10C30%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H89,1[10C27%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H86,1[10C23%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-[1m[35m20[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H83,1[10C20%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H80,1[10C17%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H77,1[10C13%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m10[m-0[1m[35m6[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m[71;117H[K[71;117H74,1[10C10%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m[71;117H[K[71;117H71,1[11C6%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H68,1[11C3%[65;1H[?25h[?25l[1;70r[1;1H[3L[1;71r[1;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/0[1m[35m9[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m[71;117H[K[71;117H65,1[10CTop[65;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[71;107H[[65;1H[71;108H<[65;1H[71;109H6[65;1H[71;110H4[65;1H[71;111H;[65;1H[71;112H7[65;1H[71;113H8[65;1H[71;114H;[65;1H[71;115H4[65;1H[71;116H2[65;1H[71;107H          [65;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[71;107H^D[65;1H[71;107H  [65;1H[1;70r[1;1H[35M[1;71r[36;1H/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-0[1m[35m8[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m15[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120lab[m/[1m[36msum100[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2019[m/[1m[35m12[m-[1m[35m29[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36msum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mAverage[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMaximum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mMinimum[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mlab02[m/[1m[36mTotal[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mHello[m[1m[33m.c[m
+/[1m[36mbackup[m/[1m[36mrgeary1[m/[1m[36mlinux[m/[1m[35m2020[m/0[1m[35m1[m-[1m[35m19[m/[1m[36mcs120lab[m/[1m[36mMultTables[m[1m[33m.c[m[71;117H[K[71;117H100,1[9C39%[65;1H[?25h[?25l[71;107H:[65;1H[71;107H[K[71;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?1006l[?1002l[?2004l"c-files.lst" 158L, 8193C written[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+[?2004l[?1l>[?25h[?1049l[23;0;0trgeary1@remote00:~/i220a/submit/lab8/exercises/1-quote-files$ cd ~
+rgeary1@remote00:~$ pwd
+/home/rgeary1
+rgeary1@remote00:~$ cc=123
+rgeary1@remote00:~$ prd; echo$xxx[K $xx[C[C[C [K; (xx=ad[Kbd[Kc;cd \[K/;pwd;echo $xx);pwd;echo $xx
+bash: prd: command not found
+456
+/
+abc
+/home/rgeary1
+456
+rgeary1@remote00:~$ prd; echo $xx; (xx=abc;cd /;pwd;echo $xx);pwd;echo $xx[1P[1@w
+/home/rgeary1
+456
+/
+abc
+/home/rgeary1
+456
+rgeary1@remote00:~$ pwd; echo $xx; (xx=abc;cd /;pwd;echo $xx);pwd;echo $xx[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccc=123[K[1P=123[1P=123x=123x=123
+rgeary1@remote00:~$ xx=123pwd; echo $xx; (xx=abc;cd /;pwd;echo $xx);pwd;echo $xx
+/home/rgeary1
+123
+/
+abc
+/home/rgeary1
+123
+rgeary1@remote00:~$ grep -i 'MAIN(' `find ~/cs220/projects/r[Kprj[Koje[K[K[K[K[K[K -name '*.c[K[ch]'`
+/home/rgeary1/cs220/projects/prj1/extras/flip-bits/flip-bits.c:main(int argc, const char *argv[])
+/home/rgeary1/cs220/projects/prj1/prj1-sol/main.c:main(int argc, const char *argv[])
+/home/rgeary1/cs220/projects/prj2/prj2-sol/main.c:main()
+/home/rgeary1/cs220/projects/prj2/prj2-sol/bcd-test.c:main(void)
+/home/rgeary1/cs220/projects/prj1-sol/main.c:main(int argc, const char *argv[])
+/home/rgeary1/cs220/projects/prj2-sol/bcd-test.c:main(void)
+/home/rgeary1/cs220/projects/prj2-sol/main.c:main()
+rgeary1@remote00:~$ grep -i 'MAIN(' `find ~/cs220/projects -name '*.[ch]'` \[K| wc -l
+7
+rgeary1@remote00:~$ echo $?
+0
+rgeary1@remote00:~$ false; echo 123
+123
+rgeary1@remote00:~$ r[Ktrue; echo 123
+123
+rgeary1@remote00:~$ true; echo 123[1P[C[1@ [1@&[1@&[1@][1P
+123
+rgeary1@remote00:~$ true && echo 123[2P;[C[C[C[C[C[C[C[C[C[1@fals[C[C[C[C[C[C[C[C[C[C[C[C[2@^?[C[1@ [1P[2P[1P[1P[1@e[C[1@ [1@&[1@&
+rgeary1@remote00:~$ false && echo 123[1P[1P[1@|[1@|
+123
+rgeary1@remote00:~$ false || echo 123&&[C[C[C[C[C[C[C[C[C[1Ptru[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@|[1@|
+rgeary1@remote00:~$ sleep 10
+echo 123
+rgeary1@remote00:~$ echo 123
+123
+rgeary1@remote00:~$ exit
+
+Script done on 2020-10-22 13:02:28-04:00 [COMMAND_EXIT_CODE="0"]
