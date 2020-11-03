@@ -3,14 +3,17 @@
 	.text
 	.globl get_cpuid
 get_cpuid:
+	pushq   %r8
 	pushq   %rcx
-	pushq   %rdx
-	xorl 	%eax, %eax	#setup cpuid opcode to 0
+	pushq	%rdx
+	xorl	%eax, %eax
+	movl	%edi, %eax
 	cpuid
 	#largest param in %eax
 	#12-char manufacturer string in ebx, edx, ecx.
-	movl	%eax, (%rdi)	#store eax cpuid result
-	movl	%ebx, (%rsi)	#store ebx cpuid result
+	movl	%eax, (%rsi)	#store eax cpuid result
+	popq	%rax
+	movl	%ebx, (%rax)	#store ebx cpuid result
 	popq	%rax		#pop address for edxP
 	movl    %edx, (%rax)    #store edx cpuid result
 	popq    %rax		#pop address for ecxP
