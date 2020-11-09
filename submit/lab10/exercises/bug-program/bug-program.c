@@ -18,10 +18,10 @@ static struct KeyValue *
 add_key_value(struct KeyValue *keyValues, const char *k, int v)
 {
   //allocate storage for new KeyValue struct
-  struct KeyValue *kv = malloc(sizeof(struct KeyValue *));
+  struct KeyValue *kv = malloc(sizeof(struct KeyValue));
 
   //allocate storage for string pointed to by k
-  char *s = malloc(strlen(k));
+  char *s = malloc(strlen(k)+1);
 
   if (kv == NULL || s == NULL) { //check if allocations succeeded
     fprintf(stderr, "malloc failure: %s\n", strerror(errno));
@@ -40,8 +40,12 @@ static void
 free_key_values(struct KeyValue *keyValues)
 {
   //go thru chain of keyValues
-  for (struct KeyValue *p = keyValues; p != NULL; p = p->succ) {
-    free(p); //free KeyValue struct
+  struct KeyValue *tp;
+  while (keyValues != NULL) {
+    tp = keyValues;
+    keyValues = keyValues->succ;
+    free((char *)tp->key);
+    free(tp);
   }
 }
 
