@@ -5,12 +5,12 @@ static int v[] = {
 };
 
 static int compute(int a, int b, int c) {
-  int s = v[2];
-  if (v[0] < a && a < v[1]) {
-    if (b < v[2]) { 
-      s += v[2];
-      if (c < v[3]) {
-	s += v[4];
+  int s = v[2];			//s = v[2] = 319,411,911,1001
+  if (v[0] < a && a < v[1]) { 	//211 < a < 333
+    if (b < v[2]) { 		// b < 319
+      s += v[2];		// s[0] += 319
+      if (c < v[3]) {		//c < 411
+	s += v[4];		// s[0] += 911 
       }
       else {
 	s += v[3];
