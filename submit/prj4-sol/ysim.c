@@ -7,6 +7,7 @@
 /** Return nybble from op (pos 0: least-significant; pos 1:
  *  most-significant)
  */
+//int count = 0;
 static Byte
 get_nybble(Byte op, int pos) {
   return (op >> (pos * 4)) & 0xF;
@@ -84,10 +85,14 @@ set_add_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
   if(read_status_y86(y86) != STATUS_AOK) return;
 	
   Byte res = 0x0;
-  if(result == 0){ res &= 0xfb;}
-  if(((Word)(1) & (result>>(sizeof(Word)-1))) == 1){ res &= 0xfd;} 
+  if(result == 0){ res |= 0x4;}
+  if(isLt0(result)){ res |= 0x2;} 
+  if(((isLt0(opA))&& isLt0(opB)  && !isLt0(result)) || 
+      (!isLt0(opA)&& !isLt0(opB)  && isLt0(result))){
 
-
+	res |= 0x1;
+  }  
+  write_cc_y86(y86, res);
 }
 
 /** Set condition codes for subtraction operation with operands opA, opB
@@ -97,12 +102,28 @@ static void
 set_sub_arith_cc(Y86 *y86, Word opA, Word opB, Word result)
 {
   //@TODO
+ Byte res = 0x0;
+ if(result == 0){ res |= 0x4;}
+  if(isLt0(result)){ res |= 0x2;} 
+  if((isLt0(opA)&& !isLt0(opB)  && isLt0(result)) || 
+      (!isLt0(opA)&& isLt0(opB)  && !isLt0(result))){
+
+	res |= 0x1;
+  }   
+  write_cc_y86(y86, res);
+
 }
 
 static void
 set_logic_op_cc(Y86 *y86, Word result)
 {
-  //@TODO
+  //@TODO 
+  Byte res = 0x0;
+  if((long long)(result) == 0){ res |= 0x4;}
+  if(isLt0(result)){ res |= 0x2;} 
+  res &= ~(0x1); 
+  write_cc_y86(y86, res);
+
 }
 
 /**************************** Operations *******************************/
@@ -118,16 +139,22 @@ op1(Y86 *y86, Byte op, Register regA, Register regB)
 	
 	case ADDL_FN :
 		set_add_arith_cc(y86, rA, rB, (long long)(rA) + (long long)(rB));
+		write_register_y86(y86, regA, (long long)(rA) + (long long)(rB));
 	        break;
         case SUBL_FN :
 		set_sub_arith_cc(y86, rA, rB, (long long)(rA) - (long long)(rB));
-	       	
+	       	write_register_y86(y86, regA, (long long)(rA) - (long long)(rB));
+
 		break;
  	case ANDL_FN :
 		set_logic_op_cc(y86, rA & rB);
+		write_register_y86(y86, regA, (long long)(rA) & (long long)(rB));
+
 		break;
 	case XORL_FN :
 		set_logic_op_cc(y86, rA ^ rB);
+		write_register_y86(y86, regA, (long long)(rA) ^ (long long)(rB));
+
 		break;
 	default :
 		write_status_y86(y86, STATUS_INS);
@@ -152,8 +179,7 @@ step_ysim(Y86 *y86)
   if(read_status_y86(y86) != STATUS_AOK) return;
 
   Address pc = read_pc_y86(y86);
-  Address ad = read_memory_byte_y86(y86, pc);
-  
+  Byte ad = read_memory_byte_y86(y86, pc);
   
   switch(get_nybble(ad, 1)){
 	
@@ -204,17 +230,54 @@ step_ysim(Y86 *y86)
 			write_register_y86(y86, get_nybble(regc, 0), read_register_y86(y86, get_nybble(regc, 1)));
 		}	
 		write_pc_y86(y86, pc + 1 + sizeof(Byte));
-		break;	
+		break;
+	  case 	OP1_CODE: ;
+		Byte registers =  read_memory_byte_y86(y86, pc + 1);
+		op1(y86, read_memory_byte_y86(y86, pc), get_nybble(registers, 0), get_nybble(registers, 1));
+		write_pc_y86(y86, pc+2);
+		break;
+	  case PUSHQ_CODE : ;
+		Address rsp = read_register_y86(y86, REG_RSP) - sizeof(Word);
+		write_memory_word_y86(y86, rsp, read_register_y86(y86, get_nybble(read_memory_byte_y86(y86, pc + 1), 1)));
+		write_register_y86(y86, REG_RSP, rsp);
+		write_pc_y86(y86, pc +2);
+
+		break;
+	  case POPQ_CODE : ;
+	 	Word valu = read_memory_word_y86(y86, read_register_y86(y86, REG_RSP));
+		write_register_y86(y86, REG_RSP, read_register_y86(y86, REG_RSP) + sizeof(Word));
+
+		write_register_y86(y86, get_nybble(read_memory_byte_y86(y86, pc + 1), 1), valu);	
+
+		write_pc_y86(y86, pc +2);
+
+		break;
+	  case Jxx_CODE : ;
+		if(check_cc(y86, ad)){
+			Word code = read_memory_word_y86(y86, read_pc_y86(y86) + 1);
+
+			write_pc_y86(y86, code);
+		}else{
+			write_pc_y86(y86, pc + sizeof(Byte) + sizeof(Word));
+		}
+		break;
 	  default : ;
+		printf("\n %u \n", ad);
 		write_status_y86(y86, STATUS_INS);
 		break;
   }
- /* 
- 	  printf("REG_RSP: %lu \n", read_register_y86(y86, REG_RSP));	  
-	  printf("REG_RAX: %lu \n", read_register_y86(y86, REG_RAX));
-	  printf("REG_RBX: %lu \n", read_register_y86(y86, REG_RBX));
-	  printf("REG_RSI: %lu \n", read_register_y86(y86, REG_RSI));
-	  printf("------------- \n");
+ 	  /* 
+ 	  printf("REG_RSP: %lX \n", read_register_y86(y86, REG_RSP));	  
+	  printf("REG_RAX: %lX \n", read_register_y86(y86, REG_RAX));
+	  printf("REG_RDX: %lX \n", read_register_y86(y86, REG_RDX));	
+	  printf("REG_RBX: %lX \n", read_register_y86(y86, REG_RBX));
+	  printf("REG_RDI: %lX \n", read_register_y86(y86, REG_RDI));	
+	  printf("REG_RSI: %lX \n", read_register_y86(y86, REG_RSI)); 
+	  //printf("STACK: %lX \n", read_memory_word_y86(y86, 0x1f0));
+	  printf("%d \n------------- \n", count);
 	  */
+ //printf("%d \n", count);
+ //count++;
 
 }
+
